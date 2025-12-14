@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
@@ -6,22 +6,120 @@
 @import "tailwindcss-intersect";
 
 @theme {
-  /* Her tilføjes theme variable // tokens */
+  /* Størrelser */
+  --text-60: 60px;
+  --text-40: 40px;
+  --text-36: 36px;
+  --text-30: 30px;
+  --text-24: 24px;
+  --text-20: 20px;
+  --text-16: 16px;
+
+  /* Farver */
+  --color-primary-bordeaux: #321f26;
+  --color-secondary-pink: #ffdbdb;
+  --color-secondary-lightgreen: #f7f9f1;
+  --color-secondary-lightblue: #dbf8ff;
+  --color-secondary-greywhite: #fcfcfc;
+  --color-tertiary-darkpink: #ff9b9b;
+  --color-accent-red: #ff0909;
 }
 
 @layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
+  h1 {
+    font-size: var(--text-36);
+    font-weight: var(--font-weight-black);
+    color: var(--color-primary-bordeaux);
+    @apply uppercase;
+  }
+
+  h2 {
+    font-size: var(--text-30);
+    font-weight: var(--font-weight-black);
+    color: var(--color-primary-bordeaux);
+    @apply uppercase;
+  }
+
+  h3 {
+    font-size: var(--text-24);
+    font-weight: var(--font-weight-black);
+    color: var(--color-primary-bordeaux);
+    @apply uppercase;
+  }
+
+  h4 {
+    font-size: var(--text-20);
+    font-weight: var(--font-weight-black);
+    color: var(--color-primary-bordeaux);
+    @apply uppercase;
+  }
+
+  h5 {
+    font-size: var(--text-20);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-primary-bordeaux);
+  }
+
+  h6 {
+    font-size: var(--text-16);
+    font-weight: var(--font-weight-black);
+    color: var(--color-primary-bordeaux);
+  }
+
+  p {
+    font-size: var(--text-16);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-primary-bordeaux);
+  }
+
+  .p-medium {
+    font-size: var(--text-16);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-primary-bordeaux);
+  }
+
+  .button {
+    font-size: var(--text-16);
+    font-weight: var(--font-weight-bold);
+    @apply uppercase;
+  }
+
+  @media (min-width: 768px) {
+    h1 {
+      font-size: var(--text-60);
+    }
+
+    h2 {
+      font-size: var(--text-36);
+    }
+
+    h3 {
+      font-size: var(--text-30);
+    }
+
+    h4 {
+      font-size: var(--text-24);
+    }
+
+    h5 {
+      font-size: var(--text-24);
+    }
+
+    h6 {
+      font-size: var(--text-20);
+    }
+
+    p {
+      font-size: var(--text-16);
+    }
+
+    .p-medium {
+      font-size: var(--text-16);
+    }
   }
 }
 
-@layer components{
-
+@layer components {
 }
-@layer utilities{
-  
+@layer utilities {
 }

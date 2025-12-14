@@ -1,5 +1,15 @@
 ---
+const { variant } = Astro.props;
+
+const base = "rounded-4xl px-4 py-2 button cursor-pointer";
+
+const variants = {
+  red: "bg-accent-red text-primary-bordeaux",
+  pink: "bg-tertiary-darkpink text-primary-bordeaux",
+  bordeaux: "bg-primary-bordeaux text-secondary-greywhite",
+};
 ---
-<div>
-    <button class="border-2 border-black"><slot /></button>
-</div>
+
+<button class={`${base} ${variants[variant]}`}>
+  <slot />
+</button>

@@ -1,5 +1,55 @@
 ---
+import Button from "./Button.astro";
 ---
-<div>
-Header - tilføj navigation mm.
-</div>
+
+<header class="bg-primary-bordeaux text-secondary-pink">
+  <nav class="flex items-center justify-between p-4">
+    <div class="flex justify-between gap-2">
+      <!-- Logo -->
+      <img src="/logo.png" alt="Billede af The Red Vans logo" class="h-10" />
+
+      <img
+        src="logo-text.png"
+        alt="The Red Van "
+        class="hidden md:block md:w-70 lg:w-110"
+      />
+    </div>
+    <!-- Burger-knap (kun mobil) -->
+    <button id="burger" class="md:hidden flex flex-col gap-1.5 cursor-pointer">
+      <span class="block h-0.5 w-7 bg-secondary-pink"></span>
+      <span class="block h-0.5 w-7 bg-secondary-pink"></span>
+      <span class="block h-0.5 w-7 bg-secondary-pink"></span>
+    </button>
+
+    <!-- Mobil-menu -->
+    <div
+      id="mobileMenu"
+      class="fixed z-50 hidden flex-col gap-4 px-4 pb-4 md:hidden bg-primary-bordeaux w-full"
+    >
+      <a href="#">Om os</a>
+      <a href="#">Bliv frivillig</a>
+      <a href="#">Viden</a>
+      <a href="#">Merch</a>
+      <a href="#">For sex workers</a>
+    </div>
+
+    <!-- Menu (desktop) -->
+    <ul class="hidden md:flex gap-5">
+      <li><a href="#">Om os</a></li>
+      <li><a href="#">Bliv frivillig</a></li>
+      <li><a href="#">Viden</a></li>
+      <li><a href="#">Merch</a></li>
+      <li><a href="#">For sex workers</a></li>
+      <!-- <li><Button variant="red">Støt</Button></li> -->
+    </ul>
+  </nav>
+</header>
+
+<script>
+  const burger = document.getElementById("burger");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  burger?.addEventListener("click", () => {
+    mobileMenu?.classList.toggle("hidden");
+  });
+</script>

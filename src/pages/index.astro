@@ -1,15 +1,134 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from '../components/Button.astro';
-import Link from '../components/Link.astro';
-import { Image } from 'astro:assets';
-import thumbsup from "../assets/images/thumbsup.png";
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
 ---
-<MainLayout title="Titel">
-	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
-	</article>
+
+<MainLayout title="Forside">
+  <section class="bg-primary-bordeaux">
+    <img
+      src="logo-text.png"
+      alt="The Red Van"
+      class="place-self-center w-110 md:hidden"
+    />
+    <img
+      src="forside1.png"
+      alt="Billede af kvinde i The Red Van"
+      class="w-120 place-self-center"
+    />
+    <h6 class="text-tertiary-darkpink">
+      Vi støtter sexarbejdere i deres ret til et trygt og værdigt arbejdsliv.
+    </h6>
+  </section>
+  <section class="bg-secondary-pink grid md:grid-cols-2">
+    <div>
+      <h1>Støt vores mission</h1>
+      <h6>
+        The Red Vans mission er at sikre bedre vilkår for gadebaserede
+        sexarbejdere. Med vores ombyggede varevogn tilbyder vi et tryggere, mere
+        hygiejnisk og værdigt arbejdsmiljø end gaden. Vi arbejder
+        skadesreducerende og kæmper aktivt for sexarbejderes rettigheder.
+      </h6>
+      <Button variant="pink">Vores arbejde</Button>
+    </div>
+    <div>
+      <h1>form her</h1>
+    </div>
+    <div>
+      <div><h2>Det går din donation til</h2></div>
+    </div>
+    <!-- karrusel her -->
+  </section>
+
+  <section class="bg-primary-bordeaux grid md:grid-cols-2">
+    <div>
+      <img src="forside2.png" alt="Billede af frivllige ved The Red Van" />
+    </div>
+    <div>
+      <h3 class="text-secondary-greywhite">
+        Vil du være med at gøre en forskel?
+      </h3>
+      <p class="p-medium text-secondary-greywhite">
+        Nattevagterne er hjertet i The Red Vans arbejde, og det er frivillige,
+        der gør det muligt for os at holde vanen åben. Som frivillig på
+        nattevagt får du mulighed for at gøre en konkret forskel for
+        gadebaserede sexarbejdere i København. Vores røde van er åben torsdag,
+        fredag og lørdag nat, hvor vi tilbyder kaffe og kondomer og er med til
+        at skabe en tryggere interaktion mellem sexarbejdere og købere.
+      </p>
+      <Button variant="pink">Bliv frivillig</Button>
+    </div>
+  </section>
+  <section class="bg-secondary-lightblue">
+    <h2>Vores tre kerneværdier:</h2>
+    <div class="grid md:grid-cols-3 md:grid-rows-3">
+      <div>
+        <h4>01 <br />Sex work is work</h4><p>
+          Vi ser sexarbejde som et legitimt erhverv og støtter
+          sexarbejderbevægelsens kamp for selvbestemmelse og afstigmatisering.
+          Sexarbejderrettigheder er menneskerettigheder!
+        </p>
+      </div>
+      <div>
+        <h4>02 <br />Harm reduction</h4><p>
+          Vi tilbyder gadebaserede sexarbejdere en mere sikker og værdig
+          arbejdsplads, fordi alle har ret til støtte og solidaritet uanset
+          deres profession og livssituation.
+        </p>
+      </div>
+      <div>
+        <h4>03 <br />Rights not rescue</h4><p>
+          Vi mener, at sexarbejdere skal beskyttes med rettigheder frem for at
+          blive reddet, fordi vi ved, at mange står uden alternative måder at
+          forsørge sig selv og deres familier.
+        </p>
+      </div>
+      <div
+        class="md:col-start-2 md:col-end-4 md:row-start-2 md:row-end-4 md:place-items-stretch"
+      >
+        <img src="forside3.png" alt="Billede af foredragsholdere" />
+      </div>
+      <div class="md:col-start-1 md:col-end-2 md:row-start-3 md:row-end-4">
+        <p>
+          Vi elsker at fortælle om vores organisation og det vi står for. Derfor
+          holder vi workshops og talks, hvor vi enten kommer ud, eller viser
+          rundt i vores vans.
+        </p>
+        <Button variant="bordeaux">Book the red van</Button>
+      </div>
+    </div>
+    <section class="bg-secondary-pink">
+      <h2>Artikler</h2>
+      <div class="grid md:grid-cols-2">
+        <p>
+          Vi lægger vægt på, at sexarbejdere skal have de samme rettigheder og
+          beskyttelse som andre arbejdstagere, og vi engagerer os i at skabe
+          opmærksomhed omkring deres vilkår.
+          <br /><br />
+          Vi deler vores indsigter og perspektiver i vores blog: læs med her
+        </p>
+        <img src="forside4.png" alt="Billede af rød kuglepen" />
+      </div>
+      <div class="border-y-accent-red border-1 grid grid-cols-3 grid-rows-2">
+        <h6>19/10/25</h6><p class="col-span-2">
+          Den danske lovgivning om sexarbejde og The Red Vans bud på
+          forbedringer
+        </p>
+        <div class="col-start-3 row-start-2 place-self-end">
+          <Button variant="pink">Læs</Button>
+        </div>
+      </div>
+      <div class="border-b-accent-red border-b-1 grid grid-cols-3 grid-rows-2">
+        <h6>08/10/25</h6><p class="col-span-2">
+          Hvordan påvirker sæsonskiftet gadebaserede sexarbejdere?
+        </p>
+        <div class="col-start-3 row-start-2 place-self-end">
+          <Button variant="pink">Læs</Button>
+        </div>
+      </div>
+      <div class="place-self-end">
+        <Button variant="pink">Se alle artikler</Button>
+      </div>
+    </section>
+  </section>
 </MainLayout>
