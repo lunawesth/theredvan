@@ -2,7 +2,7 @@
 import Button from "./Button.astro";
 ---
 
-<header class="bg-primary-bordeaux text-secondary-pink">
+<header class="bg-nav">
   <nav class="flex items-center justify-between p-4">
     <div class="flex justify-between gap-2">
       <!-- Logo -->
@@ -16,15 +16,15 @@ import Button from "./Button.astro";
     </div>
     <!-- Burger-knap (kun mobil) -->
     <button id="burger" class="md:hidden flex flex-col gap-1.5 cursor-pointer">
-      <span class="block h-0.5 w-7 bg-secondary-pink"></span>
-      <span class="block h-0.5 w-7 bg-secondary-pink"></span>
-      <span class="block h-0.5 w-7 bg-secondary-pink"></span>
+      <span class="block h-0.5 w-7 bg-pink"></span>
+      <span class="block h-0.5 w-7 bg-pink"></span>
+      <span class="block h-0.5 w-7 bg-pink"></span>
     </button>
 
     <!-- Mobil-menu -->
     <div
       id="mobileMenu"
-      class="fixed z-50 hidden flex-col gap-4 px-4 pb-4 md:hidden bg-primary-bordeaux w-full"
+      class="fixed z-50 hidden flex-col gap-4 px-4 pb-4 md:hidden bg-bordeaux w-full text-hf"
     >
       <a href="#">Om os</a>
       <a href="#">Bliv frivillig</a>
@@ -34,13 +34,13 @@ import Button from "./Button.astro";
     </div>
 
     <!-- Menu (desktop) -->
-    <ul class="hidden md:flex gap-5">
+    <ul class="hidden md:flex gap-5 text-hf">
       <li><a href="#">Om os</a></li>
       <li><a href="#">Bliv frivillig</a></li>
       <li><a href="#">Viden</a></li>
       <li><a href="#">Merch</a></li>
       <li><a href="#">For sex workers</a></li>
-      <!-- <li><Button variant="red">Støt</Button></li> -->
+      <!-- <li><Button variant="header">Støt</Button></li> -->
     </ul>
   </nav>
 </header>

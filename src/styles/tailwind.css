@@ -18,7 +18,7 @@
   /* Farver */
   --color-primary-bordeaux: #321f26;
   --color-secondary-pink: #ffdbdb;
-  --color-secondary-lightgreen: #f7f9f1;
+  --color-secondary-lightgreen: #dbf8ff;
   --color-secondary-lightblue: #dbf8ff;
   --color-secondary-greywhite: #fcfcfc;
   --color-tertiary-darkpink: #ff9b9b;
@@ -26,6 +26,71 @@
 }
 
 @layer base {
+  /* Baggrund */
+  .bg-nav {
+    background: var(--color-primary-bordeaux);
+  }
+
+  .bg-bordeaux {
+    background: var(--color-primary-bordeaux);
+  }
+
+  .bg-pink {
+    background: var(--color-secondary-pink);
+  }
+
+  .bg-green {
+    background: var(--color-secondary-lightgreen);
+  }
+
+  .bg-blue {
+    background: var(--color-secondary-lightblue);
+  }
+
+  .bg-greywhite {
+    background: var(--color-secondary-greywhite);
+  }
+
+  /* Navigation */
+  .nav-default {
+    color: var(--color-secondary-pink);
+  }
+
+  .nav-hover {
+    color: var(--color-tertiary-darkpink);
+  }
+
+  /* Buttons */
+  .btn-header {
+    background: var(--color-accent-red);
+  }
+
+  .btn-light {
+    background: var(--color-tertiary-darkpink);
+  }
+
+  .btn-dark {
+    background: var(--color-primary-bordeaux);
+  }
+
+  /* Text */
+  .text-dark {
+    color: var(--color-primary-bordeaux);
+  }
+
+  .text-light {
+    color: var(--color-secondary-greywhite);
+  }
+
+  .text-hero {
+    color: var(--color-tertiary-darkpink);
+  }
+
+  .text-hf {
+    color: var(--color-secondary-pink);
+  }
+
+  /* Fonte */
   h1 {
     font-size: var(--text-36);
     font-weight: var(--font-weight-black);
