@@ -1,0 +1,150 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import HeadingParagraf from "../components/HeadingParagraf.astro";
+import Card from "../components/Card.astro";
+import TextParagraf from "../components/TextParagraf.astro";
+import Link from "../components/Link.astro";
+---
+
+<MainLayout title="Hvem vi er">
+  <section class="bg-green">
+    <HeadingParagraf
+      title="Hvem vi er"
+      text="The Red Van er et ungt fællesskab, som består af en bred vifte af frivillige og ansatte, der spænder over forskellige faglige og personlige baggrunde. Vores forening omfatter alt fra studerende, akademikere, psykologer og sundhedsfaglige til kreative sjæle, socialfaglige medarbejdere og gadeplansarbejdere."
+    />
+    <Button variant="light">Bliv frivillig</Button>
+    <img src="frivillige.webp" alt="Billede af frivllige foran the red van" />
+
+    <h2>Sekretariatet</h2>
+    <div class="grid md:grid-cols-3">
+      <Card
+        image="om-os-jelena.webp"
+        descr="Billede af Jelena"
+        title="Jelena Seidel"
+        undertitle="Politisk konsulent"
+        text="Taler om sexarbejderrettigheder med politikere og samarbejdspartnere."
+      />
+      <Card
+        image="om-os-linnea.webp"
+        descr="Billede af Linnea"
+        title="Linnea Hardgrib"
+        undertitle="Frivilligkoordinator"
+        text="Koordinerer den frivillige indsats og sikrer stærkt engagement i TRV."
+      />
+      <Card
+        image="om-os-violeta.webp"
+        descr="Billede af Violeta"
+        title="Violeta Ligayen Yanez"
+        undertitle="Sekretariatsleder"
+        text="Leder sekretariatets arbejde og startegiske og organnisatoriske udvikling."
+      />
+    </div>
+    <img src="dragonfly.png" alt="Grafisk dragonfly" />
+  </section>
+  <section class="bg-pink">
+    <TextParagraf title="Vores bestyrelse" textCols={1}>
+      <p class="p-medium">
+        Vi tror på, at den bedste retning for organisationen findes i samspillet
+        mellem dem, der har hænderne i arbejdet, og dem, der bidrager med
+        perspektiver, netværk og specialiseret viden udefra. Vores bestyrelse
+        gennemgår hvert år de gældende anbefalinger for “good governance” og
+        udfylder dette skema, der beskriver, hvordan vi sikrer god ledelse i
+        organisationen.
+      </p>
+    </TextParagraf>
+    <div class="grid md:grid-cols-3">
+      <div class="md:col-start-2 md:col-end-4">
+        <img src="placeholder.webp" alt="" />
+        <p class="p-medium">
+          Fra venstre: Mathilde Høyberg, Nadir Kadhim Hamza, Jelena Seidel,
+          Jannet Van der Veen, Henrik Olsen, Rie Ljungmann, Yasmin Bahat, Maria
+          Kloster Tolstrup, Anna Berg, Milena Bascuñan Skaarup
+        </p>
+      </div>
+    </div>
+    <div class="border-t-accent-red border-t">
+      <h2>Ledelsen</h2>
+      <div class="grid md:grid-cols-4">
+        <Card
+          title="Forperson"
+          undertitle="Milena Bascuñan"
+          text="Uddannelsesleder på socialrådgiveruddannelsen KP og tidligere leder i Reden International, med bred erfaring inden for socialt arbejde og ledelse i civilsamfundet."
+        />
+        <Card
+          title="Næstforperson"
+          undertitle="Nadir Kadhim Hamza"
+          text="Jurist hos Stensbroens Jurister, hvor han yder juridisk bistand til migrantsexarbejdere og laver oplysningsarbejde om sexarbejderrettigheder."
+        />
+        <Card
+          title="Kasserer"
+          undertitle="Henrik Olsen"
+          text="Økonomi- og administrationschef i Fødevarebanken, med solid erfaring i økonomistyring og bestyrelsesarbejde i NGO’er."
+        />
+      </div>
+    </div>
+    <div class="border-t-accent-red border-t">
+      <h2>Bestyrelsesmedlemmer</h2>
+      <div class="grid md:grid-cols-4">
+        <Card
+          undertitle="Jannet Van der Veen"
+          text="Sekretariatsleder i Brugernes Akademi, med lang erfaring i brugerdrevet skadesreduktion og sundhedsindsatser for marginaliserede grupper."
+        />
+        <Card
+          undertitle="Jelena Seidel"
+          text="Formand i SIO, med over 25 års erfaring i sexarbejderrettigheder samt grundlægger og politisk konsulent i TRV."
+        />
+        <Card
+          undertitle="Rie Ljungmann"
+          text="Programleder i Røde Kors og tidligere sekretariatsleder i Antidote, med solid erfaring i frivillighed og ledelse i civilsamfundet."
+        />
+        <Card
+          undertitle="Yasmin Bahat"
+          text="Gadeplansmedarbejder i Projekt Udenfor og erfaren frivillig i TRV."
+        />
+        <Card
+          undertitle="Anna Berg"
+          text="konsulent i Beskæftigelses- og Integrationsforvaltningen i Københavns Kommune, med lang erfaring inden for politisk rådgivning og rettighedsarbejde."
+        />
+        <Card
+          undertitle="Maria Kloster Tolstrup"
+          text="Antropologistuderende og erfaren frivillig i TRV."
+        />
+        <Card undertitle="Mathilde Høyberg" text="Erfaren frivillig i TRV." />
+      </div>
+    </div>
+  </section>
+  <section class="bg-green">
+    <TextParagraf title="Vores retningslinjer for bestyrelsen" textCols={2}>
+      <p class="p-medium">
+        The Red Van ledes af en frivillig og ulønnet bestyrelse, som har det
+        overordnede ansvar for foreningens strategi og udvikling. Bestyrelsen
+        vælges demokratisk af de stemmeberettigede frivillige på
+        generalforsamlingen og består af både aktive frivillige og personer med
+        faglige kompetencer inden for organisationens virke. <br /><br
+        />Sammensætning og valgBestyrelsen består af 5-9 medlemmer og
+        konstituerer sig selv med en forperson, næstforperson og kasserer.
+        Minimum to af medlemmerne skal være frivillige i The Red Van. Derudover
+        vælges en frivillig tillidsrepræsentant, som deltager i bestyrelsens
+        arbejde med fokus på at varetage de frivilliges perspektiver – dog uden
+        stemmeret. <br /><br />
+      </p>
+      <p class="p-medium">
+        Bestyrelsesmedlemmer vælges for en toårig periode med forskudte valg, så
+        der sikres kontinuitet. Inden valget fastsætter generalforsamlingen,
+        hvor mange medlemmer der skal vælges. Kandidater kan stille op via to
+        lister: <br />
+        <span class="text-accent-red">LISTE A</span>
+        <br />
+        kandidater med særlige faglige kompetencer, indstillet af den siddende bestyrelse.
+        <br />
+        <span class="text-accent-red">LISTE B</span>
+        <br />
+        kandidater blandt foreningens medlemmer i øvrigt <br /><br /> Bestyrelsens
+        arbejde er frivilligt og ulønnet, men der kan i særlige tilfælde ydes honorar
+        for ekstraopgaver, hvis bestyrelsen beslutter det.
+      </p>
+    </TextParagraf>
+    <img src="stol.png" alt="Billede af rød stol" class="md:-mt-70" />
+  </section>
+</MainLayout>

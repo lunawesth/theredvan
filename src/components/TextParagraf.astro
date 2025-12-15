@@ -1,0 +1,17 @@
+---
+const { title, textCols = 1 } = Astro.props;
+---
+
+<div class="grid md:grid-cols-3 gap-6">
+  <h3 class="md:col-span-1">
+    {title}
+  </h3>
+
+  <div
+    class={textCols === 2
+      ? "md:col-span-2 grid md:grid-cols-2 gap-4"
+      : "md:col-span-2"}
+  >
+    <slot />
+  </div>
+</div>

@@ -1,18 +1,16 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
+import HeadingParagraf from "../components/HeadingParagraf.astro";
 import Link from "../components/Link.astro";
 ---
 
 <MainLayout title="Støt">
   <section class="bg-pink">
-    <section class="grid md:grid-cols-3">
-      <h1>Støt vores arbejde</h1>
-      <h5 class="md:col-span-2">
-        Når du støtter vores arbejde er du med til at sikre rettigheder,
-        sikkerhed og værdighed for gadebaserede sexarbejdere!
-      </h5>
-    </section>
+    <HeadingParagraf
+      title="Støt vores arbejde"
+      text="Når du støtter vores arbejde er du med til at sikre rettigheder, sikkerhed og værdighed for gadebaserede sexarbejdere!"
+    />
     <section class="grid md:grid-cols-2">
       <p>
         Din støtte gør en konkret forskel: Den hjælper os at stille vores røde
@@ -31,7 +29,7 @@ import Link from "../components/Link.astro";
       </p>
       <h1>form her</h1>
     </section>
-    <section><img src="tegnet-bil.webp" alt="Tegnet bil" /></section>
+    <img src="tegnet-bil.webp" alt="Tegnet bil" />
     <h2>Tre gode grunde til at donere</h2>
     <section class="grid md:grid-cols-3">
       <div>

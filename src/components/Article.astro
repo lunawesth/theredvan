@@ -1,0 +1,15 @@
+---
+const { image, descr, title, text } = Astro.props;
+import Button from "./Button.astro";
+---
+
+<div class="grid md:grid-cols-2">
+  <div class="md:flex md:flex-row">
+    <img src={image} alt={descr} class="w-100" />
+    <h4>{title}</h4>
+  </div>
+  <div>
+    <h6>{text}</h6>
+    <Button variant="light">Læs</Button>
+  </div>
+</div>
