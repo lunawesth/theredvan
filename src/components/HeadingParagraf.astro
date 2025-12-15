@@ -1,0 +1,8 @@
+---
+const { title, text } = Astro.props;
+---
+
+<div class="grid md:grid-cols-3">
+  <h1>{title}</h1>
+  <h5 class="md:col-start-2 md:col-span-2">{text}</h5>
+</div>
