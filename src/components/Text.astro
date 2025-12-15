@@ -1,0 +1,13 @@
+---
+const { teksttype = "brødtekst", stylingclasses = "" } = Astro.props;
+
+const sizeClasses = {
+  brødtekst: "text-base font-regular",
+  brødtekstmedium: "text-base font-medium",
+  knaptekst: "text-base font-medium uppercase",
+};
+---
+
+<p class:list={[sizeClasses[teksttype], stylingclasses]}>
+  <slot />
+</p>
