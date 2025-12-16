@@ -3,6 +3,8 @@ import MainLayout from "../layouts/MainLayout.astro";
 import HeadingParagraf from "../components/HeadingParagraf.astro";
 import TextParagraf from "../components/TextParagraf.astro";
 import Card from "../components/Card.astro";
+import Heading from "../components/Heading.astro";
+import Text from "../components/Text.astro";
 ---
 
 <MainLayout title="Vores arbejde">
@@ -12,7 +14,7 @@ import Card from "../components/Card.astro";
   />
   <img src="vores-arbejde-hero.webp" alt="Billede af kvinde i the red van" />
   <TextParagraf title="Mere tryghed på gaden" textCols={2}>
-    <p class="p-medium">
+    <Text teksttype="brødtekst" stylingclasses="text-dark">
       Gadebaserede sexarbejdere arbejder under usikre forhold uden klare
       rettigheder. Lovgivningen, særligt rufferiparagraffen, forhindrer
       sexarbejdere i at organisere sig, og tvinger mange til at alliere sig med
@@ -20,15 +22,15 @@ import Card from "../components/Card.astro";
       I The Red Van forholder vi os til virkeligheden, som den er og arbejder ud fra
       princippet om skadesreduktion. Det betyder, at vi forsøger at begrænse den skade,
       som gadebaserede sexarbejdere risikerer at blive udsat for.
-    </p>
-    <p class="p-medium">
+    </Text>
+    <Text teksttype="brødtekst" stylingclasses="text-dark">
       Hver weekend stiller vi en rød, ombygget varevogn til rådighed, som
       sexarbejderne kan bruge med deres kunder. <br />
       Det sikrer tryggere, mere hygiejniske og værdige forhold end gaden ellers kan
       tilbyde, og giver sexarbejderne mulighed for at bevare kontrol over situationen.
       Vanen er åben fra klokken 00:00 - 05:00 torsdag, fredag og lørdag nat og monitoreres
       af frivillige.
-    </p>
+    </Text>
   </TextParagraf>
 
   <img
@@ -37,10 +39,10 @@ import Card from "../components/Card.astro";
   />
 
   <section class="bg-blue">
-    <h5>
+    <Heading htmlheading="h2" size="xsmall" stylingclasses="text-dark">
       Udover at facilitere vores skadesreducerende gadeindsats laver vi også
       andre vigtige ting som…
-    </h5>
+    </Heading>
     <div class="grid md:grid-cols-3">
       <Card
         h3="Opkvalificering af unge"
