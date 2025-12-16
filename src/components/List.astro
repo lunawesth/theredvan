@@ -1,0 +1,20 @@
+---
+const { image = "false", descr, title, text } = Astro.props;
+import Button from "./Button.astro";
+import Heading from "./Heading.astro";
+---
+
+<div class="grid md:grid-cols-2">
+  <div class="md:flex md:flex-row">
+    {image !== "false" && <img src={image} alt={descr} class="w-100" />}
+    <Heading htmlheading="h4" size="small" stylingclasses="text-dark"
+      >{title}</Heading
+    >
+  </div>
+  <div>
+    <Heading htmlheading="h5" size="xxsmall" stylingclasses="text-dark"
+      >{text}</Heading
+    >
+    <Button variant="light">Læs</Button>
+  </div>
+</div>
