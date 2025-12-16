@@ -4,6 +4,8 @@ import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import Heading from "../components/Heading.astro";
 import Text from "../components/Text.astro";
+import Card from "../components/Card.astro";
+import List from "../components/List.astro";
 ---
 
 <MainLayout title="Forside">
@@ -82,45 +84,27 @@ import Text from "../components/Text.astro";
     </div>
   </section>
   <section class="bg-blue">
-    <Heading htmlheading="h1" size="xlarge" stylingclasses="uppercase text-dark"
+    <Heading htmlheading="h2" size="xlarge" stylingclasses="uppercase text-dark"
       >Vores tre kerneværdier:</Heading
     >
     <div class="grid md:grid-cols-3 md:grid-rows-3">
-      <div>
-        <Heading
-          htmlheading="h3"
-          size="medium"
-          stylingclasses="uppercase text-dark"
-          >01 <br />Sex work is work</Heading
-        ><Heading htmlheading="h6" size="xxsmall" stylingclasses="text-dark">
-          Vi ser sexarbejde som et legitimt erhverv og støtter
-          sexarbejderbevægelsens kamp for selvbestemmelse og afstigmatisering.
-          Sexarbejderrettigheder er menneskerettigheder!
-        </Heading>
-      </div>
-      <div>
-        <Heading
-          htmlheading="h3"
-          size="medium"
-          stylingclasses="uppercase text-dark">02 <br />Harm reduction</Heading
-        ><Heading htmlheading="h6" size="xxsmall" stylingclasses="text-dark">
-          Vi tilbyder gadebaserede sexarbejdere en mere sikker og værdig
-          arbejdsplads, fordi alle har ret til støtte og solidaritet uanset
-          deres profession og livssituation.
-        </Heading>
-      </div>
-      <div>
-        <Heading
-          htmlheading="h3"
-          size="medium"
-          stylingclasses="uppercase text-dark"
-          >03 <br />Rights not rescue</Heading
-        ><Heading htmlheading="h6" size="xxsmall" stylingclasses="text-dark">
-          Vi mener, at sexarbejdere skal beskyttes med rettigheder frem for at
-          blive reddet, fordi vi ved, at mange står uden alternative måder at
-          forsørge sig selv og deres familier.
-        </Heading>
-      </div>
+      <Card
+        header="01"
+        title="Sex work is work"
+        text="Vi ser sexarbejde som et legitimt erhverv og støtter sexarbejderbevægelsens kamp for selvbestemmelse og afstigmatisering. Sexarbejderrettigheder er menneskerettigheder!"
+      />
+
+      <Card
+        header="02"
+        title="Harm reduction"
+        text="Vi tilbyder gadebaserede sexarbejdere en mere sikker og værdig arbejdsplads, fordi alle har ret til støtte og solidaritet uanset deres profession og livssituation."
+      />
+
+      <Card
+        header="03"
+        title="Rights not rescue"
+        text="Vi mener, at sexarbejdere skal beskyttes med rettigheder frem for at blive reddet, fordi vi ved, at mange står uden alternative måder at forsørge sig selv og deres familier."
+      />
       <div
         class="md:col-start-2 md:col-end-4 md:row-start-2 md:row-end-4 md:place-items-stretch"
       >
@@ -137,12 +121,12 @@ import Text from "../components/Text.astro";
     </div>
     <section class="bg-pink">
       <Heading
-        htmlheading="h1"
+        htmlheading="h2"
         size="xlarge"
         stylingclasses="uppercase text-dark">Artikler</Heading
       >
       <div class="grid md:grid-cols-2">
-        <Heading htmlheading="h5" size="xsmall" stylingclasses="text-dark">
+        <Heading htmlheading="h3" size="xsmall" stylingclasses="text-dark">
           Vi lægger vægt på, at sexarbejdere skal have de samme rettigheder og
           beskyttelse som andre arbejdstagere, og vi engagerer os i at skabe
           opmærksomhed omkring deres vilkår.
@@ -151,26 +135,17 @@ import Text from "../components/Text.astro";
         </Heading>
         <img src="forside4.png" alt="Billede af rød kuglepen" />
       </div>
-      <div class="border-y-accent-red border grid grid-cols-3 grid-rows-2">
-        <Heading htmlheading="h4" size="small" stylingclasses="text-dark"
-          >19/10/25</Heading
-        ><Heading htmlheading="h6" size="xxsmall" stylingclasses="text-dark">
-          Den danske lovgivning om sexarbejde og The Red Vans bud på
-          forbedringer
-        </Heading>
-        <div class="col-start-3 row-start-2 place-self-end">
-          <Button variant="light">Læs</Button>
-        </div>
+      <div class="border-y-accent-red border">
+        <List
+          title="D. 20/11/25"
+          text="Den danske lovgivning om sexarbejde og The Red Vans bud på forbedringer"
+        />
       </div>
-      <div class="border-b-accent-red border-b grid grid-cols-3 grid-rows-2">
-        <Heading htmlheading="h4" size="small" stylingclasses="text-dark"
-          >08/10/25</Heading
-        ><Heading htmlheading="h6" size="xxsmall" stylingclasses="text-dark">
-          Hvordan påvirker sæsonskiftet gadebaserede sexarbejdere?
-        </Heading>
-        <div class="col-start-3 row-start-2 place-self-end">
-          <Button variant="light">Læs</Button>
-        </div>
+      <div class="border-b-accent-red border-b">
+        <List
+          title="D. 19/10/25"
+          text="Hvordan påvirker sæsonskiftet gadebaseret sexarbejdere?"
+        />
       </div>
       <div class="place-self-end">
         <Button variant="light">Se alle artikler</Button>
