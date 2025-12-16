@@ -2,16 +2,18 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import HeadingParagraf from "../components/HeadingParagraf.astro";
 import TextParagraf from "../components/TextParagraf.astro";
+import Text from "../components/Text.astro";
+import Heading from "../components/Heading.astro";
 ---
 
 <MainLayout title="Bliv frivillig">
   <section class="bg-green">
     <TextParagraf title="Bliv frivillig" textCols={1}>
-      <p class="p-medium">
+      <Heading htmlheading="h2" size="xsmall" stylingclasses="text-dark">
         The Red Van er et fællesskab drevet af hovedsageligt frivillige. Uden
         frivillige, ingen Red Van. Derfor er vi altid nysgerrige på at høre fra
         dig, hvis du er nysgerrig på os.
-      </p>
+      </Heading>
     </TextParagraf>
 
     <img src="frivillige.webp" alt="Billede af the red vans frivillige" />
@@ -33,7 +35,9 @@ import TextParagraf from "../components/TextParagraf.astro";
       mad. Efter vagten sørger I for, at vanen er klar til næste vagt.</TextParagraf
     >
 
-    <h1>citat her</h1>
+    <Heading htmlheading="h5" size="xsmall" stylingclasses="text-dark"
+      >citat her</Heading
+    >
 
     <TextParagraf title="Det skal du vide" textCols={1}
       >Frivillige forpligter sig til mindst én nattevagt om måneden. Arbejdet

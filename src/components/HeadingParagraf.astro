@@ -1,8 +1,15 @@
 ---
+import Heading from "./Heading.astro";
 const { title, text } = Astro.props;
 ---
 
 <div class="grid md:grid-cols-3">
-  <h1>{title}</h1>
-  <h5 class="md:col-start-2 md:col-span-2">{text}</h5>
+  <Heading htmlheading="h1" size="xlarge" stylingclasses="text-dark uppercase"
+    >{title}</Heading
+  >
+  <Heading
+    htmlheading="h2"
+    size="xsmall"
+    stylingclasses="text-dark md:col-start-2 md:col-span-2">{text}</Heading
+  >
 </div>

@@ -35,7 +35,13 @@ const {
       </Heading>
     )
   }
-  {undertitle !== "false" && <h5>{undertitle}</h5>}
+  {
+    undertitle !== "false" && (
+      <Heading htmlheading="h5" size="xsmall" stylingclasses="text-dark">
+        {undertitle}
+      </Heading>
+    )
+  }
   <Heading htmlheading="h6" size="xxsmall" stylingclasses="text-dark"
     >{text}</Heading
   >

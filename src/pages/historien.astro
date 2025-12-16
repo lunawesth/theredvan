@@ -2,6 +2,8 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import HeadingParagraf from "../components/HeadingParagraf.astro";
 import TextParagraf from "../components/TextParagraf.astro";
+import Text from "../components/Text.astro";
+import Heading from "../components/Heading.astro";
 ---
 
 <MainLayout title="Historien">
@@ -14,30 +16,32 @@ import TextParagraf from "../components/TextParagraf.astro";
     <img src="sexelancen.webp" alt="Billede af sexelancen" />
 
     <TextParagraf title="2016 Sexelancen opstår" textCols={2}>
-      <p class="p-medium">
+      <Text teksttype="brødtekst" stylingclasses="text-dark">
         The Red Van startede som projektet Sexelancen, lanceret i samarbejde med
         SIO (Sexarbejdernes Interesse Organisation). SIO havde i flere år
         arbejdet på Vesterbros gader for at forstå de problemstillinger og
         behov, som gadebaserede sexarbejdere på og omkring Istedgade oplevede.
         Inspireret af Fixelancen anskaffede man en sygetransport og grundlagde
         Sexelancen under foreningen Minoritet.
-      </p>
+      </Text>
     </TextParagraf>
 
-    <h1>citat her</h1>
+    <Heading htmlheading="h5" size="xsmall" stylingclasses="text-dark"
+      >citat her</Heading
+    >
 
     <img src="foredrag.webp" alt="Billeder fra et foredrag" />
 
     <TextParagraf title="2018 – 2025 Foreningen the red van" textCols={2}>
-      <p class="p-medium">
-        The Red Van startede som projektet Sexelancen, lanceret i samarbejde med
-        SIO (Sexarbejdernes Interesse Organisation). SIO havde i flere år
-        arbejdet på Vesterbros gader for at forstå de problemstillinger og
-        behov, som gadebaserede sexarbejdere på og omkring Istedgade oplevede.
-        Inspireret af Fixelancen anskaffede man en sygetransport og grundlagde
-        Sexelancen under foreningen Minoritet.
-      </p>
-      <p class="p-medium">
+      <Text teksttype="brødtekst" stylingclasses="text-dark">
+        I 2018 blev Sexelancen pensioneret og erstattet af en rød varevogn.
+        Samtidig blev den selvstændige forening The Red Van stiftet. <br /><br
+        />I 2023 opnåede The Red Van en vigtig milepæl, da vi modtog vores
+        første bevilling fra Københavns Kommune og Finansloven. Denne
+        finansiering har gjort det muligt for os at udvide vores aktiviteter og
+        forbedre vores tilbud til sexarbejderne.
+      </Text>
+      <Text teksttype="brødtekst" stylingclasses="text-dark">
         I 2024 kunne The Red Van etablere sit første sekretariat, hvilket
         markerede endnu et skridt i vores udvikling som organisation. Med et
         dedikeret fællesskab og øgede ressourcer er vi nu bedre rustet end
@@ -47,7 +51,7 @@ import TextParagraf from "../components/TextParagraf.astro";
         konflikthåndtering og skadesreduktion. Vi samarbejder med lokale aktører
         og forskere for at optimere vores indsats og sikre en positiv
         indvirkning.
-      </p>
+      </Text>
     </TextParagraf>
   </section>
 </MainLayout>

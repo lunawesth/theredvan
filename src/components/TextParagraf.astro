@@ -1,11 +1,14 @@
 ---
 const { title, textCols = 1 } = Astro.props;
+import Heading from "./Heading.astro";
 ---
 
 <div class="grid md:grid-cols-3 gap-6">
-  <h3 class="md:col-span-1">
-    {title}
-  </h3>
+  <Heading
+    htmlheading="h3"
+    size="medium"
+    stylingclasses="uppercase text-dark md:col-span-1">{title}</Heading
+  >
 
   <div
     class={textCols === 2
