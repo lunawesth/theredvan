@@ -6,31 +6,31 @@
 @import "tailwindcss-intersect";
 
 @font-face {
-  font-family: 'ABCMonumentGrotesk-Regular';
-  src: url('/fonts/ABCMonumentGrotesk-Regular-Trial.woff2') format('woff2');
+  font-family: "ABCMonumentGrotesk-Regular";
+  src: url("/fonts/ABCMonumentGrotesk-Regular-Trial.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: 'ABCMonumentGrotesk-Bold';
-  src: url('/fonts/ABCMonumentGrotesk-Bold-Trial.woff') format('woff');
+  font-family: "ABCMonumentGrotesk-Bold";
+  src: url("/fonts/ABCMonumentGrotesk-Bold-Trial.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'ABCMonumentGrotesk-Medium';
-  src: url('/fonts/ABCMonumentGrotesk-Medium-Trial.woff') format('woff');
+  font-family: "ABCMonumentGrotesk-Medium";
+  src: url("/fonts/ABCMonumentGrotesk-Medium-Trial.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'PPRightGrotesk-CompactBlack';
-  src: url('/fonts/PPRightGrotesk-CompactBlack.woff') format('woff');
+  font-family: "PPRightGrotesk-CompactBlack";
+  src: url("/fonts/PPRightGrotesk-CompactBlack.woff") format("woff");
 }
 
 @theme {
   /* Fonte */
-  --font-regular: 'ABCMonumentGrotesk-Regular';
-  --font-bold: 'ABCMonumentGrotesk-Bold';
-  --font-medium: 'ABCMonumentGrotesk-Medium';
-  --font-black: 'PPRightGrotesk-CompactBlack';
+  --font-regular: "ABCMonumentGrotesk-Regular";
+  --font-bold: "ABCMonumentGrotesk-Bold";
+  --font-medium: "ABCMonumentGrotesk-Medium";
+  --font-black: "PPRightGrotesk-CompactBlack";
 
   /* Størrelser */
   --text-60: 60px;
@@ -49,6 +49,19 @@
   --color-secondary-greywhite: #fcfcfc;
   --color-tertiary-darkpink: #ff9b9b;
   --color-accent-red: #ff0909;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-gutter: 20px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 40px;
+  --spacing-3xl: 80px;
+  --spacing-4xl: 96px;
+  --spacing-5xl: 128px;
+  --spacing-6xl: 160px;
 }
 
 @layer base {
@@ -114,110 +127,6 @@
 
   .text-hf {
     color: var(--color-secondary-pink);
-  }
-
-  /* Fonte */
-  /* h1 {
-    font-size: var(--text-36);
-    font-weight: var(--font-weight-black);
-    color: var(--color-primary-bordeaux);
-    font-family: var(--font-black);
-    @apply uppercase;
-  }
-
-  h2 {
-    font-size: var(--text-30);
-    font-weight: var(--font-weight-black);
-    color: var(--color-primary-bordeaux);
-    font-family: var(--font-black);
-    @apply uppercase;
-  }
-
-  h3 {
-    font-size: var(--text-24);
-    font-weight: var(--font-weight-black);
-    color: var(--color-primary-bordeaux);
-    font-family: var(--font-black);
-    @apply uppercase;
-  }
-
-  h4 {
-    font-size: var(--text-20);
-    font-weight: var(--font-weight-black);
-    color: var(--color-primary-bordeaux);
-    font-family: var(--font-black);
-    @apply uppercase;
-  }
-
-  h5 {
-    font-size: var(--text-20);
-    font-weight: var(--font-weight-medium);
-    color: var(--color-primary-bordeaux);
-    font-family: var(--font-medium);
-  }
-
-  h6 {
-    font-size: var(--text-16);
-    font-weight: var(--font-weight-black);
-    color: var(--color-primary-bordeaux);
-    font-family: var(--font-regular);
-
-  }
-
-  p {
-    font-size: var(--text-16);
-    font-weight: var(--font-weight-regular);
-    color: var(--color-primary-bordeaux);
-    font-family: var(--font-regular);
-  }
-
-  .p-medium {
-    font-size: var(--text-16);
-    font-weight: var(--font-weight-medium);
-    color: var(--color-primary-bordeaux);
-    font-family: var(--font-medium);
-  }
-
-  .button {
-    font-size: var(--text-16);
-    font-weight: var(--font-weight-bold);
-    font-family: var(--font-bold);
-    @apply uppercase;
-  } */
-  
-
-  @media (min-width: 768px) {
-    h1 {
-      font-size: var(--text-60);
-    }
-
-    h2 {
-      font-size: var(--text-36);
-    }
-
-    h3 {
-      font-size: var(--text-30);
-    }
-
-    h4 {
-      font-size: var(--text-24);
-    }
-
-    h5 {
-      font-size: var(--text-24);
-    }
-
-    h6 {
-      font-size: var(--text-20);
-    }
-
-    p {
-      font-size: var(--text-16);
-    }
-
-    .p-medium {
-      font-size: var(--text-16);
-    }
   }
 }
 
