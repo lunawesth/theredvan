@@ -3,6 +3,8 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import HeadingParagraf from "../components/HeadingParagraf.astro";
 import Link from "../components/Link.astro";
+import Text from "../components/Text.astro";
+import Heading from "../components/Heading.astro";
 ---
 
 <MainLayout title="Støt">
@@ -12,7 +14,7 @@ import Link from "../components/Link.astro";
       text="Når du støtter vores arbejde er du med til at sikre rettigheder, sikkerhed og værdighed for gadebaserede sexarbejdere!"
     />
     <section class="grid md:grid-cols-2">
-      <p>
+      <Text teksttype="brødtekstmedium" stylingclasses="text-dark">
         Din støtte gør en konkret forskel: Den hjælper os at stille vores røde
         varevogn til rådighed, som gadebaserede sexarbejdere kan bruge med sine
         kunder, under tryggere, mere hygiejniske og værdige forhold end gaden
@@ -26,7 +28,7 @@ import Link from "../components/Link.astro";
         Når vi tilbyder et indendørs, sikkert og hygiejnisk arbejdsrum, reducerer
         vi de risici og den utryghed, der ofte følger med at arbejde om natten og
         på gaden. Støt The Red Van og gør en mærkbar forskel for gadebaserede sexarbejdere!
-      </p>
+      </Text>
       <h1>form her</h1>
     </section>
     <img src="tegnet-bil.webp" alt="Tegnet bil" />
@@ -61,15 +63,19 @@ import Link from "../components/Link.astro";
   </section>
   <section class="bg-bordeaux grid md:grid-cols-2">
     <div>
-      <h2 class="text-secondary-greywhite">Din plakat</h2>
-      <p class="text-secondary-greywhite">
+      <Heading
+        htmlheading="h2"
+        size="large"
+        stylingclasses="text-light uppercase">Din plakat</Heading
+      >
+      <Heading htmlheading="h3" size="xsmall" stylingclasses="text-light">
         Som tak for din støtte får du en gratis plakat, hvis du donerer mindst
         100 kr. om måneden. Hver plakat er et unikt kunstværk med håndlavet
         charme, trykt i linotryk, og du kan stolt hænge den op for at vise din
         støtte for sexarbejderes rettigheder. <br />
         Når du har opsat din donation, modtager du en mail med information om, hvordan
         du får din plakat tilsendt.
-      </p>
+      </Heading>
       <Button variant="light">Se vores merch</Button>
     </div>
 
@@ -77,11 +83,15 @@ import Link from "../components/Link.astro";
   </section>
   <section class="bg-pink">
     <div class="grid md:grid-cols-3">
-      <h2>Doner med stil</h2>
-      <p class="p-medium md:col-span-2">
+      <Heading
+        htmlheading="h2"
+        size="large"
+        stylingclasses="text-dark uppercase">Doner med stil</Heading
+      >
+      <Heading htmlheading="h3" size="xxsmall" stylingclasses="text-dark">
         Støt The Red Van ved at købe vores fede merch. <br />Vi har alt fra
         t-shirts til muleposer!
-      </p>
+      </Heading>
     </div>
     <section class="grid md:grid-cols-3">
       <div>
