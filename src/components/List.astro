@@ -4,17 +4,20 @@ import Button from "./Button.astro";
 import Heading from "./Heading.astro";
 ---
 
-<div class="grid md:grid-cols-2">
-  <div class="md:flex md:flex-row">
-    {image !== "false" && <img src={image} alt={descr} class="w-100" />}
-    <Heading htmlheading="h4" size="small" stylingclasses="text-dark"
-      >{title}</Heading
+<div class="md:py-gutter grid md:grid-cols-2">
+  <div class="flex">
+    {image !== "false" && <img src={image} alt={descr} class="w-100 py-lg" />}
+    <Heading
+      htmlheading="h4"
+      size="small"
+      stylingclasses="text-dark pb-sm md:pb-0">{title}</Heading
     >
-  </div>
-  <div>
-    <Heading htmlheading="h5" size="xxsmall" stylingclasses="text-dark"
-      >{text}</Heading
+  </div><div class="flex md:justify-between">
+    <Heading
+      htmlheading="h5"
+      size="xxsmall"
+      stylingclasses="text-dark pb-md md:pr-lg">{text}</Heading
     >
-    <Button variant="light">Læs</Button>
+    <div><Button variant="light">Læs</Button></div>
   </div>
 </div>
