@@ -11,8 +11,12 @@ const {
 } = Astro.props;
 ---
 
-<div>
-  {image !== "false" && <img src={image} alt={descr} />}
+<div class="md:gap-xs">
+  {
+    image !== "false" && (
+      <img src={image} alt={descr} class="pb-lg pt-3xl md:pt-0" />
+    )
+  }
   {
     header !== "false" && (
       <Heading
@@ -29,7 +33,7 @@ const {
       <Heading
         htmlheading="h4"
         size="medium"
-        stylingclasses="uppercase text-dark"
+        stylingclasses="uppercase text-dark pb-xs"
       >
         {title}
       </Heading>
@@ -37,12 +41,12 @@ const {
   }
   {
     undertitle !== "false" && (
-      <Heading htmlheading="h5" size="xsmall" stylingclasses="text-dark">
+      <Heading htmlheading="h5" size="xsmall" stylingclasses="text-dark pb-sm">
         {undertitle}
       </Heading>
     )
   }
-  <Heading htmlheading="h6" size="xxsmall" stylingclasses="text-dark pt-sm"
+  <Heading htmlheading="h6" size="xxsmall" stylingclasses="text-dark pb-xl"
     >{text}</Heading
   >
 </div>
