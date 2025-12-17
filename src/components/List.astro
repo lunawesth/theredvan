@@ -11,16 +11,12 @@ import Heading from "./Heading.astro";
         <img src={image} alt={descr} class="w-100 py-lg pt-0 md:pr-gutter" />
       )
     }
-    <Heading
-      htmlheading="h4"
-      size="small"
-      stylingclasses="text-dark pb-sm md:pb-0">{title}</Heading
+    <Heading htmlheading="h2" size="small" stylingclasses="pb-sm md:pb-0"
+      >{title}</Heading
     >
   </div><div class="md:flex md:justify-between">
-    <Heading
-      htmlheading="h5"
-      size="xxsmall"
-      stylingclasses="text-dark pb-md md:pr-lg">{text}</Heading
+    <Heading htmlheading="h3" size="xxsmall" stylingclasses="pb-md md:pr-lg"
+      >{text}</Heading
     >
     <div><Button variant="light">Læs</Button></div>
   </div>

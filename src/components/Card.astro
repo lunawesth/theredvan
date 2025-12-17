@@ -19,34 +19,26 @@ const {
   }
   {
     header !== "false" && (
-      <Heading
-        htmlheading="h3"
-        size="medium"
-        stylingclasses="uppercase text-dark pt-xl"
-      >
+      <Heading htmlheading="h3" size="medium" stylingclasses="uppercase pt-xl">
         {header}
       </Heading>
     )
   }
   {
     title !== "false" && (
-      <Heading
-        htmlheading="h4"
-        size="medium"
-        stylingclasses="uppercase text-dark pb-xs"
-      >
+      <Heading htmlheading="h4" size="medium" stylingclasses="uppercase pb-xs">
         {title}
       </Heading>
     )
   }
   {
     undertitle !== "false" && (
-      <Heading htmlheading="h5" size="xsmall" stylingclasses="text-dark pb-sm">
+      <Heading htmlheading="h5" size="xsmall" stylingclasses="pb-sm">
         {undertitle}
       </Heading>
     )
   }
-  <Heading htmlheading="h6" size="xxsmall" stylingclasses="text-dark pb-xl"
+  <Heading htmlheading="base" size="xxsmall" stylingclasses="pb-xl"
     >{text}</Heading
   >
 </div>
