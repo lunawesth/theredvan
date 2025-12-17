@@ -2,11 +2,11 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import HeadingParagraf from "../components/HeadingParagraf.astro";
-import Link from "../components/Link.astro";
 import Text from "../components/Text.astro";
 import Heading from "../components/Heading.astro";
 import Card from "../components/Card.astro";
 import TextParagraf from "../components/TextParagraf.astro";
+import Stoetform from "../components/Stoetform.astro";
 ---
 
 <MainLayout title="Støt">
@@ -16,7 +16,7 @@ import TextParagraf from "../components/TextParagraf.astro";
       text="Når du støtter vores arbejde er du med til at sikre rettigheder, sikkerhed og værdighed for gadebaserede sexarbejdere!"
     />
     <section class="grid md:grid-cols-2 md:pt-5xl">
-      <Text teksttype="basemedium" stylingclasses=" pb-6xl">
+      <Text teksttype="basemedium" stylingclasses=" pb-6xl md:pb-2xl">
         Din støtte gør en konkret forskel: Den hjælper os at stille vores røde
         varevogn til rådighed, som gadebaserede sexarbejdere kan bruge med sine
         kunder, under tryggere, mere hygiejniske og værdige forhold end gaden
@@ -31,9 +31,11 @@ import TextParagraf from "../components/TextParagraf.astro";
         vi de risici og den utryghed, der ofte følger med at arbejde om natten og
         på gaden. Støt The Red Van og gør en mærkbar forskel for gadebaserede sexarbejdere!
       </Text>
-      <h1>form her</h1>
+      <div class="mx-auto">
+        <Stoetform />
+      </div>
+      <img src="bil.webp" alt="Rød bil" class="py-3xl md:pb-2xl md:pt-0" />
     </section>
-    <img src="bil.webp" alt="Rød bil" class="py-3xl md:py-2xl" />
     <Heading
       htmlheading="h2"
       size="xlarge"

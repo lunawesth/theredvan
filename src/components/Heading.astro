@@ -3,9 +3,13 @@ const {
   htmlheading = "",
   size = "medium",
   font = undefined,
-  stylingclasses = "text-dark",
+  stylingclasses = "",
 } = Astro.props;
 const Htmlheading = htmlheading;
+
+const baseTextColor = "text-dark";
+
+const mergedStylingClasses = `${baseTextColor} ${stylingclasses ?? ""}`;
 
 const sizeClasses = {
   xlarge: "lg:text-6xl text-4xl",
@@ -30,6 +34,6 @@ const defaultFontForSize = {
 const fontClass = font ?? defaultFontForSize[size];
 ---
 
-<Htmlheading class:list={[sizeClasses[size], fontClass, stylingclasses]}>
+<Htmlheading class:list={[sizeClasses[size], fontClass, mergedStylingClasses]}>
   <slot />
 </Htmlheading>

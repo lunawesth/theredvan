@@ -1,5 +1,5 @@
 ---
-const { teksttype = "base", stylingclasses = "text-dark" } = Astro.props;
+const { teksttype = "base", stylingclasses = "" } = Astro.props;
 
 const sizeClasses = {
   base: "text-base font-regular",
@@ -7,8 +7,12 @@ const sizeClasses = {
   knaptekst: "text-base font-medium uppercase",
   formtekst: "text-xl font-medium",
 };
+
+const baseTextColor = "text-dark";
+
+const mergedStylingClasses = `${baseTextColor} ${stylingclasses ?? ""}`;
 ---
 
-<p class:list={[sizeClasses[teksttype], stylingclasses]}>
+<p class:list={[sizeClasses[teksttype], mergedStylingClasses]}>
   <slot />
 </p>

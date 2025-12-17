@@ -104,98 +104,102 @@ import Stoetform from "../components/Stoetform.astro";
     </div>
   </section>
   <!-- karrusel her -->
-</MainLayout>
 
-<section
-  class="bg-bordeaux px-gutter py-2xl md:px-2xl md:py-5xl grid md:grid-cols-3"
->
-  <div class="md:col-span-2 md:pr-gutter">
-    <img src="forside-body1.webp" alt="Billede af frivllige ved The Red Van" />
-  </div>
-  <div>
+  <section
+    class="bg-bordeaux px-gutter py-2xl md:px-2xl md:py-5xl grid md:grid-cols-3"
+  >
+    <div class="md:col-span-2 md:pr-gutter">
+      <img
+        src="forside-body1.webp"
+        alt="Billede af frivllige ved The Red Van"
+      />
+    </div>
+    <div>
+      <Heading
+        htmlheading="h2"
+        size="medium"
+        stylingclasses="uppercase text-light pt-xl pb-md md:pt-0"
+        >Vil du være med til at gøre en forskel?</Heading
+      >
+      <Text stylingclasses="text-light pb-xl">
+        Nattevagterne er hjertet i The Red Vans arbejde, og det er frivillige,
+        der gør det muligt for os at holde vanen åben. Som frivillig på
+        nattevagt får du mulighed for at gøre en konkret forskel for
+        gadebaserede sexarbejdere i København. Vores røde van er åben torsdag,
+        fredag og lørdag nat, hvor vi tilbyder kaffe og kondomer og er med til
+        at skabe en tryggere interaktion mellem sexarbejdere og købere.
+      </Text>
+      <Button variant="light">Bliv frivillig</Button>
+    </div>
+  </section>
+  <section class="bg-blue px-gutter py-2xl md:pt-3xl md:pb-4xl md:px-2xl">
     <Heading
       htmlheading="h2"
-      size="medium"
-      stylingclasses="uppercase text-light pt-xl pb-md md:pt-0"
-      >Vil du være med til at gøre en forskel?</Heading
+      size="xlarge"
+      stylingclasses="uppercase pb-xl md:pb-2xl"
+      >Vores tre kerneværdier:</Heading
     >
-    <Text stylingclasses="text-light pb-xl">
-      Nattevagterne er hjertet i The Red Vans arbejde, og det er frivillige, der
-      gør det muligt for os at holde vanen åben. Som frivillig på nattevagt får
-      du mulighed for at gøre en konkret forskel for gadebaserede sexarbejdere i
-      København. Vores røde van er åben torsdag, fredag og lørdag nat, hvor vi
-      tilbyder kaffe og kondomer og er med til at skabe en tryggere interaktion
-      mellem sexarbejdere og købere.
-    </Text>
-    <Button variant="light">Bliv frivillig</Button>
-  </div>
-</section>
-<section class="bg-blue px-gutter py-2xl md:pt-3xl md:pb-4xl md:px-2xl">
-  <Heading
-    htmlheading="h2"
-    size="xlarge"
-    stylingclasses="uppercase pb-xl md:pb-2xl">Vores tre kerneværdier:</Heading
-  >
-  <div class="grid md:grid-cols-3 md:grid-rows-3 pb-3xl md:gap-gutter">
-    <Card
-      header="01"
-      title="Sex work is work"
-      text="Vi ser sexarbejde som et legitimt erhverv og støtter sexarbejderbevægelsens kamp for selvbestemmelse og afstigmatisering. Sexarbejderrettigheder er menneskerettigheder!"
-    />
+    <div class="grid md:grid-cols-3 md:grid-rows-3 pb-3xl md:gap-gutter">
+      <Card
+        header="01"
+        title="Sex work is work"
+        text="Vi ser sexarbejde som et legitimt erhverv og støtter sexarbejderbevægelsens kamp for selvbestemmelse og afstigmatisering. Sexarbejderrettigheder er menneskerettigheder!"
+      />
 
-    <Card
-      header="02"
-      title="Harm reduction"
-      text="Vi tilbyder gadebaserede sexarbejdere en mere sikker og værdig arbejdsplads, fordi alle har ret til støtte og solidaritet uanset deres profession og livssituation."
-    />
+      <Card
+        header="02"
+        title="Harm reduction"
+        text="Vi tilbyder gadebaserede sexarbejdere en mere sikker og værdig arbejdsplads, fordi alle har ret til støtte og solidaritet uanset deres profession og livssituation."
+      />
 
-    <Card
-      header="03"
-      title="Rights not rescue"
-      text="Vi mener, at sexarbejdere skal beskyttes med rettigheder frem for at blive reddet, fordi vi ved, at mange står uden alternative måder at forsørge sig selv og deres familier."
-    />
-    <div
-      class="md:col-start-2 md:col-end-4 md:row-start-2 md:row-end-4 md:place-items-stretch pt-3xl pb-xl md:pt-4xl md:pb-0"
+      <Card
+        header="03"
+        title="Rights not rescue"
+        text="Vi mener, at sexarbejdere skal beskyttes med rettigheder frem for at blive reddet, fordi vi ved, at mange står uden alternative måder at forsørge sig selv og deres familier."
+      />
+      <div
+        class="md:col-start-2 md:col-end-4 md:row-start-2 md:row-end-4 md:place-items-stretch pt-3xl pb-xl md:pt-4xl md:pb-0"
+      >
+        <img src="foredrag.webp" alt="Billede af foredragsholdere" />
+      </div>
+      <div class="md:col-start-1 md:col-end-2 md:row-start-3 md:row-end-4">
+        <Text teksttype="basemedium" stylingclasses=" pb-xl">
+          Vi elsker at fortælle om vores organisation og det vi står for. Derfor
+          holder vi workshops og talks, hvor vi enten kommer ud, eller viser
+          rundt i vores vans.
+        </Text>
+        <Button variant="dark">Book the red van</Button>
+      </div>
+    </div>
+  </section>
+  <section class="bg-pink px-gutter py-3xl md:px-2xl">
+    <Heading htmlheading="h2" size="xlarge" stylingclasses="uppercase  pb-md"
+      >Artikler</Heading
     >
-      <img src="foredrag.webp" alt="Billede af foredragsholdere" />
+    <div class="grid md:grid-cols-2 md:pb-5xl">
+      <Heading htmlheading="h3" size="xsmall" stylingclasses=" pb-6xl">
+        Vi lægger vægt på, at sexarbejdere skal have de samme rettigheder og
+        beskyttelse som andre arbejdstagere, og vi engagerer os i at skabe
+        opmærksomhed omkring deres vilkår.
+        <br /><br />
+        Vi deler vores indsigter og perspektiver i vores blog: læs med her
+      </Heading>
+      <img src="forside4.png" alt="Billede af rød kuglepen" />
     </div>
-    <div class="md:col-start-1 md:col-end-2 md:row-start-3 md:row-end-4">
-      <Text teksttype="basemedium" stylingclasses=" pb-xl">
-        Vi elsker at fortælle om vores organisation og det vi står for. Derfor
-        holder vi workshops og talks, hvor vi enten kommer ud, eller viser rundt
-        i vores vans.
-      </Text>
-      <Button variant="dark">Book the red van</Button>
+    <div class="border-y-accent-red border-y py-md md:pb-xl">
+      <List
+        title="D. 20/11/25"
+        text="Den danske lovgivning om sexarbejde og The Red Vans bud på forbedringer"
+      />
     </div>
-  </div>
-</section>
-<section class="bg-pink px-gutter py-3xl md:px-2xl">
-  <Heading htmlheading="h2" size="xlarge" stylingclasses="uppercase  pb-md"
-    >Artikler</Heading
-  >
-  <div class="grid md:grid-cols-2 md:pb-5xl">
-    <Heading htmlheading="h3" size="xsmall" stylingclasses=" pb-6xl">
-      Vi lægger vægt på, at sexarbejdere skal have de samme rettigheder og
-      beskyttelse som andre arbejdstagere, og vi engagerer os i at skabe
-      opmærksomhed omkring deres vilkår.
-      <br /><br />
-      Vi deler vores indsigter og perspektiver i vores blog: læs med her
-    </Heading>
-    <img src="forside4.png" alt="Billede af rød kuglepen" />
-  </div>
-  <div class="border-y-accent-red border-y py-md md:pb-xl">
-    <List
-      title="D. 20/11/25"
-      text="Den danske lovgivning om sexarbejde og The Red Vans bud på forbedringer"
-    />
-  </div>
-  <div class="border-b-accent-red border-b py-md mb-xl">
-    <List
-      title="D. 19/10/25"
-      text="Hvordan påvirker sæsonskiftet gadebaseret sexarbejdere?"
-    />
-  </div>
-  <div class="place-self-end">
-    <Button variant="light">Se alle artikler</Button>
-  </div>
-</section>
+    <div class="border-b-accent-red border-b py-md mb-xl">
+      <List
+        title="D. 19/10/25"
+        text="Hvordan påvirker sæsonskiftet gadebaseret sexarbejdere?"
+      />
+    </div>
+    <div class="place-self-end">
+      <Button variant="light">Se alle artikler</Button>
+    </div>
+  </section>
+</MainLayout>
