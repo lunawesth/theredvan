@@ -10,18 +10,27 @@ import Text from "../components/Text.astro";
 ---
 
 <MainLayout title="Hvem vi er">
-  <section class="bg-green">
+  <section class="bg-green px-gutter py-3xl md:px-2xl md:py-4xl">
     <HeadingParagraf
       title="Hvem vi er"
       text="The Red Van er et ungt fællesskab, som består af en bred vifte af frivillige og ansatte, der spænder over forskellige faglige og personlige baggrunde. Vores forening omfatter alt fra studerende, akademikere, psykologer og sundhedsfaglige til kreative sjæle, socialfaglige medarbejdere og gadeplansarbejdere."
     />
+    <div class="grid md:grid-cols-3">
+      <img
+        src="frivillige.webp"
+        alt="Billede af frivllige foran the red van"
+        class="pb-xl md:col-span-2"
+      />
+    </div>
     <Button variant="light">Bliv frivillig</Button>
-    <img src="frivillige.webp" alt="Billede af frivllige foran the red van" />
 
-    <Heading htmlheading="h2" size="large" stylingclasses="uppercase text-dark"
+    <Heading
+      htmlheading="h2"
+      size="large"
+      stylingclasses="uppercase text-dark pt-3xl pb-2xl md:pb-lg"
       >Sekretariatet</Heading
     >
-    <div class="grid md:grid-cols-3">
+    <div class="grid md:grid-cols-3 gap-gutter">
       <Card
         image="om-os-jelena.webp"
         descr="Billede af Jelena"
@@ -46,7 +55,7 @@ import Text from "../components/Text.astro";
     </div>
     <img src="dragonfly.png" alt="Grafisk dragonfly" />
   </section>
-  <section class="bg-pink">
+  <section class="bg-pink px-gutter py-3xl md:px-2xl md:py-4xl">
     <TextParagraf title="Vores bestyrelse" textCols={1}>
       <Text teksttype="brødtekstmedium" stylingclasses="text-dark">
         Vi tror på, at den bedste retning for organisationen findes i samspillet
@@ -58,7 +67,7 @@ import Text from "../components/Text.astro";
       </Text>
     </TextParagraf>
     <div class="grid md:grid-cols-3">
-      <div class="md:col-start-2 md:col-end-4">
+      <div class="md:col-start-2 md:col-end-4 py-3xl">
         <img src="placeholder.webp" alt="" />
         <Text teksttype="brødtekstmedium" stylingclasses="text-dark">
           Fra venstre: Mathilde Høyberg, Nadir Kadhim Hamza, Jelena Seidel,
@@ -71,7 +80,7 @@ import Text from "../components/Text.astro";
       <Heading
         htmlheading="h2"
         size="medium"
-        stylingclasses="uppercase text-dark">Ledelsen</Heading
+        stylingclasses="uppercase text-dark pt-3xl pb-xl">Ledelsen</Heading
       >
       <div class="grid md:grid-cols-4">
         <Card
@@ -95,7 +104,8 @@ import Text from "../components/Text.astro";
       <Heading
         htmlheading="h2"
         size="medium"
-        stylingclasses="uppercase text-dark">Bestyrelsesmedlemmer</Heading
+        stylingclasses="uppercase text-dark pt-3xl pb-xl"
+        >Bestyrelsesmedlemmer</Heading
       >
       <div class="grid md:grid-cols-4">
         <Card
@@ -126,7 +136,7 @@ import Text from "../components/Text.astro";
       </div>
     </div>
   </section>
-  <section class="bg-green">
+  <section class="bg-green px-gutter py-3xl md:px-2xl md:py-4xl">
     <TextParagraf title="Vores retningslinjer for bestyrelsen" textCols={2}>
       <Text teksttype="brødtekst" stylingclasses="text-dark">
         The Red Van ledes af en frivillig og ulønnet bestyrelse, som har det
