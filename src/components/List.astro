@@ -5,14 +5,18 @@ import Heading from "./Heading.astro";
 ---
 
 <div class="md:py-gutter grid md:grid-cols-2">
-  <div class="flex">
-    {image !== "false" && <img src={image} alt={descr} class="w-100 py-lg" />}
+  <div class="md:flex">
+    {
+      image !== "false" && (
+        <img src={image} alt={descr} class="w-100 py-lg pt-0 md:pr-gutter" />
+      )
+    }
     <Heading
       htmlheading="h4"
       size="small"
       stylingclasses="text-dark pb-sm md:pb-0">{title}</Heading
     >
-  </div><div class="flex md:justify-between">
+  </div><div class="md:flex md:justify-between">
     <Heading
       htmlheading="h5"
       size="xxsmall"

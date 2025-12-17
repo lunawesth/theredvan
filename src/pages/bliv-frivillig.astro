@@ -7,7 +7,7 @@ import Heading from "../components/Heading.astro";
 ---
 
 <MainLayout title="Bliv frivillig">
-  <section class="bg-green">
+  <section class="bg-green px-gutter py-3xl md:px-2xl md:pt-4xl md:pb-4xl">
     <TextParagraf title="Bliv frivillig" textCols={1}>
       <Heading htmlheading="h2" size="xsmall" stylingclasses="text-dark">
         The Red Van er et fællesskab drevet af hovedsageligt frivillige. Uden
@@ -16,7 +16,13 @@ import Heading from "../components/Heading.astro";
       </Heading>
     </TextParagraf>
 
-    <img src="frivillige.webp" alt="Billede af the red vans frivillige" />
+    <div class="grid md:grid-cols-3">
+      <img
+        src="frivillige.webp"
+        alt="Billede af the red vans frivillige"
+        class="py-3xl md:col-start-2 md:col-end-4"
+      />
+    </div>
 
     <TextParagraf title="Hvad indebærer det" textCols={1}
       >Nattevagterne er hjertet i The Red Vans arbejde, og det er frivillige,
@@ -35,9 +41,16 @@ import Heading from "../components/Heading.astro";
       mad. Efter vagten sørger I for, at vanen er klar til næste vagt.</TextParagraf
     >
 
-    <Heading htmlheading="h5" size="xsmall" stylingclasses="text-dark"
-      >citat her</Heading
-    >
+    <div class="grid md:grid-cols-3 py-3xl">
+      <div class="md:col-start-2 md:col-end-4">
+        <Heading htmlheading="h4" size="xsmall" stylingclasses="text-dark"
+          >“At være frivillig for The Red Van er utroligt givende. Jeg føler, at
+          jeg gør en stor forskel for vanens brugere. Nattevagterne skaber
+          tryghed på gaden for sexarbejderne.”</Heading
+        ><br />
+        <Text>– Johannes Agersnap, frivillig siden oktober 2022</Text>
+      </div>
+    </div>
 
     <TextParagraf title="Det skal du vide" textCols={1}
       >Frivillige forpligter sig til mindst én nattevagt om måneden. Arbejdet
@@ -55,5 +68,7 @@ import Heading from "../components/Heading.astro";
       men du er velkommen til at skrive din ansøgning på dansk også.
     </TextParagraf>
   </section>
-  <section class="bg-pink"><h1>form her</h1></section>
+  <section class="bg-pink px-gutter py-3xl md:px-2xl md:pt-4xl md:pb-5xl">
+    <h1>form her</h1>
+  </section>
 </MainLayout>

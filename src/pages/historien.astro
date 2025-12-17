@@ -7,13 +7,19 @@ import Heading from "../components/Heading.astro";
 ---
 
 <MainLayout title="Historien">
-  <section class="bg-blue">
+  <section class="bg-blue px-gutter py-3xl md:px-2xl md:pt-4xl md:pb-5xl">
     <HeadingParagraf
       title="Historien"
       text="Siden 2016 har vi haft en klar mission: At forbedre forholdene for gadebaserede sexarbejdere i København. Vores tilgang til skades-reduktion bygger på det enkle princip, at sexarbejde er arbejde, og at sexarbejdere skal have rettigheder, værdighed og sikkerhed."
     />
 
-    <img src="sexelancen.webp" alt="Billede af sexelancen" />
+    <div class="grid md:grid-cols-3">
+      <img
+        src="sexelancen.webp"
+        alt="Billede af sexelancen"
+        class="pb-3xl md:col-start-2 md:col-end-4"
+      />
+    </div>
 
     <TextParagraf title="2016 Sexelancen opstår" textCols={2}>
       <Text teksttype="brødtekst" stylingclasses="text-dark">
@@ -26,11 +32,32 @@ import Heading from "../components/Heading.astro";
       </Text>
     </TextParagraf>
 
-    <Heading htmlheading="h5" size="xsmall" stylingclasses="text-dark"
-      >citat her</Heading
-    >
+    <div class="grid md:grid-cols-3">
+      <div class="md:col-start-2 md:col-end-4">
+        <Heading
+          htmlheading="h4"
+          size="xsmall"
+          stylingclasses="text-dark pt-3xl"
+          >“I begyndelsen var vi usikre på, om nogen ville bruge vognen. Men
+          fordi vi selv var sexarbejdere og til stede på gaden, opbyggede vi
+          hurtigt tillid. Tilbuddet er stadig uformelt og anonymt – vi kræver
+          ikke noget til gengæld. Det gør, at vognen er blevet et populært
+          tilbud på gaden.”</Heading
+        ><br />
+        <Text>
+          — Jelena Seidel, politisk konsulent i The Red Van & medstifter af
+          Sexelancen</Text
+        >
+      </div>
+    </div>
 
-    <img src="foredrag.webp" alt="Billeder fra et foredrag" />
+    <div class="grid md:grid-cols-3">
+      <img
+        src="foredrag.webp"
+        alt="Billeder fra et foredrag"
+        class="py-3xl md:col-start-2 md:col-end-4"
+      />
+    </div>
 
     <TextParagraf title="2018 – 2025 Foreningen the red van" textCols={2}>
       <Text teksttype="brødtekst" stylingclasses="text-dark">

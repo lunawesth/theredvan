@@ -5,16 +5,18 @@ import HeadingParagraf from "../components/HeadingParagraf.astro";
 import Link from "../components/Link.astro";
 import Text from "../components/Text.astro";
 import Heading from "../components/Heading.astro";
+import Card from "../components/Card.astro";
+import TextParagraf from "../components/TextParagraf.astro";
 ---
 
 <MainLayout title="Støt">
-  <section class="bg-pink">
+  <section class="bg-pink px-gutter py-3xl md:px-2xl md:pt-4xl md:pb-4xl">
     <HeadingParagraf
       title="Støt vores arbejde"
       text="Når du støtter vores arbejde er du med til at sikre rettigheder, sikkerhed og værdighed for gadebaserede sexarbejdere!"
     />
-    <section class="grid md:grid-cols-2">
-      <Text teksttype="brødtekstmedium" stylingclasses="text-dark">
+    <section class="grid md:grid-cols-2 md:pt-5xl">
+      <Text teksttype="brødtekstmedium" stylingclasses="text-dark pb-6xl">
         Din støtte gør en konkret forskel: Den hjælper os at stille vores røde
         varevogn til rådighed, som gadebaserede sexarbejdere kan bruge med sine
         kunder, under tryggere, mere hygiejniske og værdige forhold end gaden
@@ -31,44 +33,41 @@ import Heading from "../components/Heading.astro";
       </Text>
       <h1>form her</h1>
     </section>
-    <img src="tegnet-bil.webp" alt="Tegnet bil" />
-    <h2>Tre gode grunde til at donere</h2>
-    <section class="grid md:grid-cols-3">
-      <div>
-        <h3>01 <br />Du gør en konkret forskel</h3><p>
-          Med din donation hjælper du os at holde varevognen åben hele året,
-          uanset vind og vejr. Din støtte går til at skabe mere sikre og værdige
-          vilkår for gadebaserede sexarbejdere, og gør, at vi hele tiden kan
-          købe nødvendige og relevante produkter som vores målgruppe
-          efterspørger.
-        </p>
-      </div>
-      <div>
-        <h3>02 <br />Vi kan være fleksible</h3><p>
-          Når du donerer, giver du os fleksibilitet til at bruge midlerne dér,
-          hvor de gør mest gavn. Din donation kan gå direkte til
-          skadesreducerende produkter, og giver os muligheden for hurtigere at
-          kunne imødekomme nye behov fra kvinderne.
-        </p>
-      </div>
-      <div>
-        <h3>03 <br />Du får en gratis plakat</h3><p>
-          Vælger du at støtte med minimum 100 kr./måned, får du som tak en
-          eksklusiv plakat med, som symbol på din solidaritet og engagement. Den
-          kan hænges stolt op for at vise at du støtter sexarbejderes
-          rettigheder!
-        </p>
-      </div>
-    </section>
+    <img src="bil.webp" alt="Rød bil" class="py-3xl md:py-2xl" />
+    <Heading
+      htmlheading="h2"
+      size="xlarge"
+      stylingclasses="uppercase text-dark pb-xl md:pb-2xl"
+      >Tre gode grunde til at donere</Heading
+    >
+    <div class="grid md:grid-cols-3 pb-3xl md:pb-4xl md:gap-gutter">
+      <Card
+        header="01"
+        title="Du gør en konkret forskel"
+        text="Med din donation hjælper du os at holde varevognen åben hele året, uanset vind og vejr. Din støtte går til at skabe mere sikre og værdige vilkår for gadebaserede sexarbejdere, og gør, at vi hele tiden kan købe nødvendige og relevante produkter som vores målgruppe efterspørger."
+      />
+      <Card
+        header="02"
+        title="Vi kan være fleksible"
+        text="Når du donerer, giver du os fleksibilitet til at bruge midlerne dér, hvor de gør mest gavn. Din donation kan gå direkte til skadesreducerende produkter, og giver os muligheden for hurtigere at kunne imødekomme nye behov fra kvinderne."
+      />
+      <Card
+        header="03"
+        title="Du får en gratis plakat"
+        text="Vælger du at støtte med minimum 100 kr./måned, får du som tak en eksklusiv plakat med, som symbol på din solidaritet og engagement. Den kan hænges stolt op for at vise at du støtter sexarbejderes rettigheder!"
+      />
+    </div>
   </section>
-  <section class="bg-bordeaux grid md:grid-cols-2">
-    <div>
+  <section
+    class="bg-bordeaux px-gutter py-3xl md:px-2xl md:py-4xl grid md:grid-cols-6"
+  >
+    <div class="md:col-start-1 md:col-end-4">
       <Heading
         htmlheading="h2"
         size="large"
-        stylingclasses="text-light uppercase">Din plakat</Heading
+        stylingclasses="text-light uppercase pb-md">Din plakat</Heading
       >
-      <Heading htmlheading="h3" size="xsmall" stylingclasses="text-light">
+      <Heading htmlheading="h3" size="xsmall" stylingclasses="text-light pb-xl">
         Som tak for din støtte får du en gratis plakat, hvis du donerer mindst
         100 kr. om måneden. Hver plakat er et unikt kunstværk med håndlavet
         charme, trykt i linotryk, og du kan stolt hænge den op for at vise din
@@ -79,37 +78,28 @@ import Heading from "../components/Heading.astro";
       <Button variant="light">Se vores merch</Button>
     </div>
 
-    <div><img src="plakat.webp" alt="Billede af plakat" /></div>
-  </section>
-  <section class="bg-pink">
-    <div class="grid md:grid-cols-3">
-      <Heading
-        htmlheading="h2"
-        size="large"
-        stylingclasses="text-dark uppercase">Doner med stil</Heading
-      >
-      <Heading htmlheading="h3" size="xxsmall" stylingclasses="text-dark">
-        Støt The Red Van ved at købe vores fede merch. <br />Vi har alt fra
-        t-shirts til muleposer!
-      </Heading>
+    <div class="md:col-start-5 md:col-end-7">
+      <img src="plakat.webp" alt="Billede af plakat" class="pt-3xl md:pt-0" />
     </div>
-    <section class="grid md:grid-cols-3">
-      <div>
-        <img
-          src="tote.png"
-          alt="Billede af mulepose med grafisk illustration"
-        />
-      </div><div class="hidden md:block">
-        <img
-          src="tote.png"
-          alt="Billede af mulepose med grafisk illustration"
-        />
-      </div><div class="hidden md:block">
-        <img
-          src="tote.png"
-          alt="Billede af mulepose med grafisk illustration"
-        />
-      </div>
+  </section>
+  <section class="bg-pink px-gutter py-3xl md:px-2xl md:py-4xl">
+    <TextParagraf title="Doner med stil" textCols={1}
+      >Støt The Red Van ved at købe vores fede merch. <br />Vi har alt fra
+      t-shirts til muleposer!
+    </TextParagraf>
+
+    <section class="py-xl md:pt-5xl grid md:grid-cols-3 gap-gutter">
+      <img src="tote.png" alt="Billede af mulepose med grafisk illustration" />
+      <img
+        src="tote.png"
+        alt="Billede af mulepose med grafisk illustration"
+        class="hidden md:block"
+      />
+      <img
+        src="tote.png"
+        alt="Billede af mulepose med grafisk illustration"
+        class="hidden md:block"
+      />
     </section>
     <Button variant="light">Se vores merch</Button>
   </section>
