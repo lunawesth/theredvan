@@ -8,7 +8,11 @@ import Heading from "./Heading.astro";
   <div class="md:flex">
     {
       image !== "false" && (
-        <img src={image} alt={descr} class="w-100 py-lg pt-0 md:pr-gutter" />
+        <img
+          src={image}
+          alt={descr}
+          class="w-100 py-lg pt-2xl md:pt-0 md:pr-gutter"
+        />
       )
     }
     <Heading htmlheading="h2" size="small" stylingclasses="pb-sm md:pb-0"
