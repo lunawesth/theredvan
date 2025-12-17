@@ -1,0 +1,202 @@
+---
+import Text from "./Text.astro";
+import Button from "./Button.astro";
+---
+
+<form x-data="{ step: 1 }">
+  <div
+    x-data="{ active: 'fast' }"
+    class="relative flex w-96.75 rounded-full btn-light p-2"
+  >
+    <!-- SLIDER -->
+    <div
+      class="absolute inset-0 w-1/2 bg-bordeaux transition-transform duration-300"
+      :class="active === 'fast'
+    ? 'rounded-l-full rounded-r-none translate-x-0'
+    : 'rounded-r-full rounded-l-none translate-x-full'"
+    >
+    </div>
+
+    <!-- STØT FAST -->
+    <button
+      type="button"
+      @click="active = 'fast'"
+      class="relative w-1/2 uppercase font-bold text-dark transition-colors"
+      :class="active === 'fast' ? 'text-light' : ''"
+    >
+      Støt fast
+    </button>
+
+    <!-- ENKEL DONATION -->
+    <button
+      type="button"
+      @click="active = 'once'"
+      class="relative z-10 w-1/2 uppercase font-bold text-dark text-base transition-colors"
+      :class="active === 'once' ? 'text-light' : ''"
+    >
+      Enkel donation
+    </button>
+  </div>
+
+  <div x-show="step === 1">
+    <Text teksttype="formtekst" stylingclasses="text-dark pt-xl pb-md">
+      Månedligt beløb
+    </Text>
+
+    <div class="flex flex-row gap-10 pb-md">
+      <!-- 75 kr -->
+      <label class="flex items-center gap-5 cursor-pointer">
+        <input
+          type="radio"
+          name="beløb"
+          value="75"
+          class="w-7 h-7 rounded-full
+      bg-greywhite
+      checked:shadow-[inset_0_0_0_30px_#321F26]
+      transition
+      focus:outline-none
+      focus:ring-0 border-0"
+        />
+        <span
+          ><Text teksttype="formtekst" stylingclasses="text-dark">75 kr.</Text
+          ></span
+        >
+      </label>
+
+      <!-- 100 kr -->
+      <label class="flex items-center gap-5 cursor-pointer">
+        <input
+          type="radio"
+          name="beløb"
+          value="100"
+          class="w-7 h-7 rounded-full
+      bg-greywhite
+      checked:shadow-[inset_0_0_0_30px_#321F26]
+      transition
+      focus:outline-none
+      focus:ring-0 border-0"
+        />
+        <span
+          ><Text teksttype="formtekst" stylingclasses="text-dark">100 kr.</Text
+          ></span
+        >
+      </label>
+
+      <!-- 200 kr -->
+      <label class="flex items-center gap-5 cursor-pointer">
+        <input
+          type="radio"
+          name="beløb"
+          value="200"
+          class="w-7 h-7 rounded-full
+      bg-greywhite
+      checked:shadow-[inset_0_0_0_30px_#321F26]
+      transition
+      focus:outline-none
+      focus:ring-0 border-0"
+        />
+        <span
+          ><Text teksttype="formtekst" stylingclasses="text-dark">200 kr.</Text>
+        </span>
+      </label>
+    </div>
+
+    <!-- INDTAST SELV BELØB -->
+    <div class="flex flex-col w-96.75 pb-xl">
+      <label for="selvvalgt"
+        ><Text teksttype="formtekst" stylingclasses="text-dark text-base pb-xs"
+          >Vælg selv et beløb:</Text
+        ></label
+      >
+      <input
+        type="text"
+        id="selvvalgt"
+        name="selvvalgt"
+        class="rounded-xs border-0"
+      />
+    </div>
+
+    <!-- NÆSTE TRIN KNAP -->
+    <div class="flex flex-end">
+      <Button @click="step = step + 1" variant="light" type="button"
+        >Næste trin</Button
+      >
+    </div>
+  </div>
+
+  <div x-show="step === 2">
+    <Text teksttype="formtekst" stylingclasses="text-dark pt-xl pb-md">
+      Betalingsmetode
+    </Text>
+
+    <div class="flex flex-row gap-21 pb-md">
+      <!-- MobilePay -->
+      <label class="flex items-center gap-5 cursor-pointer">
+        <input
+          type="radio"
+          name="betalingsmetode"
+          value="mobilepay"
+          class="w-7 h-7 rounded-full
+      bg-greywhite
+      checked:shadow-[inset_0_0_0_30px_#321F26]
+      transition
+      focus:outline-none
+      focus:ring-0 border-0"
+        />
+        <span
+          ><Text teksttype="formtekst" stylingclasses="text-dark"
+            >MobilePay</Text
+          ></span
+        >
+      </label>
+
+      <!-- Kort -->
+      <label class="flex items-center gap-5 cursor-pointer">
+        <input
+          type="radio"
+          name="betalingsmetode"
+          value="kort"
+          class="w-7 h-7 rounded-full
+      bg-greywhite
+      checked:shadow-[inset_0_0_0_30px_#321F26]
+      transition
+      focus:outline-none
+      focus:ring-0 border-0"
+        />
+        <span
+          ><Text teksttype="formtekst" stylingclasses="text-dark">Kort</Text>
+        </span>
+      </label>
+    </div>
+
+    <!-- Fulde navn -->
+    <div class="flex flex-col w-96.75 pb-xl">
+      <label for="selvvalgt"
+        ><Text teksttype="formtekst" stylingclasses="text-dark text-base pb-xs"
+          >Fulde navn:</Text
+        ></label
+      >
+      <input type="text" id="navn" name="navn" class="rounded-xs border-0" />
+    </div>
+
+    <div>
+      <!-- e-mail -->
+      <div class="flex flex-col w-96.75 pb-xl">
+        <label for="email"
+          ><Text
+            teksttype="formtekst"
+            stylingclasses="text-dark text-base pb-xs">E-mail:</Text
+          ></label
+        >
+        <input
+          type="email"
+          id="email"
+          name="email"
+          class="rounded-xs border-0"
+        />
+      </div>
+
+      <Button type="button" @click="step = 1" variant="light">Tilbage</Button>
+    </div>
+  </div>
+</form>
