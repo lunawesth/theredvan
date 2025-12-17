@@ -8,42 +8,52 @@ import Text from "../components/Text.astro";
 ---
 
 <MainLayout title="Vores arbejde">
-  <HeadingParagraf
-    title="Vores arbejde"
-    text="Hos The Red Van er vi stærke fortalere for sexarbejderes rettigheder. Vi arbejder aktivt for at ændre den offentlige mening og bekæmpe stigmaet omkring sexarbejde, imens vi hver uge selv er til stede på gaden."
-  />
-  <img src="vores-arbejde-hero.webp" alt="Billede af kvinde i the red van" />
-  <TextParagraf title="Mere tryghed på gaden" textCols={2}>
-    <Text teksttype="brødtekst" stylingclasses="text-dark">
-      Gadebaserede sexarbejdere arbejder under usikre forhold uden klare
-      rettigheder. Lovgivningen, særligt rufferiparagraffen, forhindrer
-      sexarbejdere i at organisere sig, og tvinger mange til at alliere sig med
-      folk, der er villige til at bryde loven. <br /><br />
-      I The Red Van forholder vi os til virkeligheden, som den er og arbejder ud fra
-      princippet om skadesreduktion. Det betyder, at vi forsøger at begrænse den skade,
-      som gadebaserede sexarbejdere risikerer at blive udsat for.
-    </Text>
-    <Text teksttype="brødtekst" stylingclasses="text-dark">
-      Hver weekend stiller vi en rød, ombygget varevogn til rådighed, som
-      sexarbejderne kan bruge med deres kunder. <br />
-      Det sikrer tryggere, mere hygiejniske og værdige forhold end gaden ellers kan
-      tilbyde, og giver sexarbejderne mulighed for at bevare kontrol over situationen.
-      Vanen er åben fra klokken 00:00 - 05:00 torsdag, fredag og lørdag nat og monitoreres
-      af frivillige.
-    </Text>
-  </TextParagraf>
-
-  <img
-    src="vores-arbejde-body.webp"
-    alt="Billede af mand som rengører the red van"
-  />
-
-  <section class="bg-blue">
-    <Heading htmlheading="h2" size="xsmall" stylingclasses="text-dark">
-      Udover at facilitere vores skadesreducerende gadeindsats laver vi også
-      andre vigtige ting som…
-    </Heading>
+  <section class="bg-greywhite px-gutter py-3xl md:px-2xl md:pt-4xl md:pb-6xl">
+    <HeadingParagraf
+      title="Vores arbejde"
+      text="Hos The Red Van er vi stærke fortalere for sexarbejderes rettigheder. Vi arbejder aktivt for at ændre den offentlige mening og bekæmpe stigmaet omkring sexarbejde, imens vi hver uge selv er til stede på gaden."
+    />
     <div class="grid md:grid-cols-3">
+      <img
+        src="vores-arbejde-hero.webp"
+        alt="Billede af kvinde i the red van"
+        class="pb-3xl md:col-start-2 md:col-end-4"
+      />
+    </div>
+    <TextParagraf title="Mere tryghed på gaden" textCols={2}>
+      <Text teksttype="brødtekst" stylingclasses="text-dark">
+        Gadebaserede sexarbejdere arbejder under usikre forhold uden klare
+        rettigheder. Lovgivningen, særligt rufferiparagraffen, forhindrer
+        sexarbejdere i at organisere sig, og tvinger mange til at alliere sig
+        med folk, der er villige til at bryde loven. <br /><br />
+        I The Red Van forholder vi os til virkeligheden, som den er og arbejder ud
+        fra princippet om skadesreduktion. Det betyder, at vi forsøger at begrænse
+        den skade, som gadebaserede sexarbejdere risikerer at blive udsat for.
+      </Text>
+      <Text teksttype="brødtekst" stylingclasses="text-dark">
+        Hver weekend stiller vi en rød, ombygget varevogn til rådighed, som
+        sexarbejderne kan bruge med deres kunder. <br />
+        Det sikrer tryggere, mere hygiejniske og værdige forhold end gaden ellers
+        kan tilbyde, og giver sexarbejderne mulighed for at bevare kontrol over situationen.
+        Vanen er åben fra klokken 00:00 - 05:00 torsdag, fredag og lørdag nat og monitoreres
+        af frivillige.
+      </Text>
+    </TextParagraf>
+    <div class="grid md:grid-cols-6">
+      <img
+        src="vores-arbejde-body.webp"
+        alt="Billede af frivillig som rengører the red van"
+        class="pt-3xl md:col-start-3 md:col-end-6"
+      />
+    </div>
+  </section>
+
+  <section class="bg-blue px-gutter py-3xl md:px-2xl md:py-4xl">
+    <Heading htmlheading="h2" size="xsmall" stylingclasses="text-dark pb-2xl">
+      Udover at facilitere vores skadesreducerende <br />gadeindsats laver vi
+      også andre vigtige ting som…
+    </Heading>
+    <div class="grid md:grid-cols-3 md:gap-gutter">
       <Card
         header="Opkvalificering af unge"
         text="Vi tilbyder løbende uddannelsesprogrammer og mentorskab til vores unge frivillige. Vores programmer fokuserer på at udvikle deres færdigheder og viden om sociale problemstillinger, så de kan håndtere komplekse udfordringer effektivt. Vi sikrer, at de får praktisk erfaring og støtte til at bidrage aktivt til vores mission og skabe positive forandringer."
