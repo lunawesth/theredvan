@@ -1,5 +1,5 @@
 ---
-const { variant } = Astro.props;
+const { variant, type = "button", ...rest } = Astro.props;
 
 const base = "rounded-4xl px-4 py-2 button cursor-pointer";
 
@@ -10,6 +10,10 @@ const variants = {
 };
 ---
 
-<button class={`${base} ${variants[variant]}`}>
+<button
+  type={type}
+  {...rest}
+  class={`${base} ${variants[variant]} ${rest.class ?? ""}`}
+>
   <slot />
 </button>

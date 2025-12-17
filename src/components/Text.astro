@@ -1,10 +1,11 @@
 ---
-const { teksttype = "brødtekst", stylingclasses = "" } = Astro.props;
+const { teksttype = "base", stylingclasses = "" } = Astro.props;
 
 const sizeClasses = {
-  brødtekst: "text-base font-regular",
-  brødtekstmedium: "text-base font-medium",
+  base: "text-base font-regular",
+  basemedium: "text-base font-medium",
   knaptekst: "text-base font-medium uppercase",
+  formtekst: "text-xl font-medium",
 };
 ---
 
