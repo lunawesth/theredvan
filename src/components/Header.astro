@@ -26,27 +26,113 @@ import Heading from "./Heading.astro";
     <!-- Menu (desktop) -->
     <div>
       <ul class="hidden md:flex md:flex-row md:items-center gap-8 text-hf">
-        <li>
+        <li class="relative group">
           <a
             href="#"
             class="transition-colors duration-500 ease-in-out hover:text-tertiary-darkpink"
-            >Om os</a
           >
+            Om os
+          </a>
+
+          <ul
+            class="absolute left-0 top-full mt-3 min-w-60
+                   bg-bordeaux
+                   opacity-0 invisible
+                   transition-all duration-200
+                   group-hover:opacity-100 group-hover:visible"
+          >
+            <li>
+              <a
+                href="vores-arbejde"
+                class="block px-4 py-2 hover:text-tertiary-darkpink"
+              >
+                Vores arbejde
+              </a>
+            </li>
+            <li>
+              <a
+                href="hvem-vi-er"
+                class="block px-4 py-2 hover:text-tertiary-darkpink"
+              >
+                Hvem vi er
+              </a>
+            </li>
+            <li>
+              <a
+                href="historien"
+                class="block px-4 py-2 hover:text-tertiary-darkpink"
+              >
+                Historien
+              </a>
+            </li>
+          </ul>
         </li>
-        <li>
+
+        <!-- bliv frivillig -->
+        <li class="relative group">
           <a
             href="#"
             class="transition-colors duration-500 ease-in-out hover:text-tertiary-darkpink"
-            >Bliv frivillig</a
           >
+            Bliv frivillig
+          </a>
+
+          <ul
+            class="absolute left-0 top-full mt-3 min-w-60
+                   bg-bordeaux
+                   opacity-0 invisible
+                   transition-all duration-200
+                   group-hover:opacity-100 group-hover:visible"
+          >
+            <li>
+              <a
+                href="bliv-frivillig"
+                class="block px-4 py-2 hover:text-tertiary-darkpink"
+              >
+                Bliv frivillig
+              </a>
+            </li>
+          </ul>
         </li>
-        <li>
+
+        <!-- viden -->
+        <li class="relative group">
           <a
             href="#"
             class="transition-colors duration-500 ease-in-out hover:text-tertiary-darkpink"
-            >Viden</a
           >
+            Viden
+          </a>
+
+          <ul
+            class="absolute left-0 top-full mt-3 min-w-60
+                   bg-bordeaux
+                   opacity-0 invisible
+                   transition-all duration-200
+                   group-hover:opacity-100 group-hover:visible"
+          >
+            <li>
+              <a
+                href="artikler"
+                class="block px-4 py-2 hover:text-tertiary-darkpink"
+              >
+                Artikler
+              </a>
+            </li>
+            <li>
+              <a href="#" class="block px-4 py-2 hover:text-tertiary-darkpink">
+                Ressourcer
+              </a>
+            </li>
+            <li>
+              <a href="#" class="block px-4 py-2 hover:text-tertiary-darkpink">
+                Oplæg og vorkshops
+              </a>
+            </li>
+          </ul>
         </li>
+
+        <!-- merch -->
         <li>
           <a
             href="#"
@@ -54,10 +140,12 @@ import Heading from "./Heading.astro";
             >Merch</a
           >
         </li>
+
+        <!-- for sex workers -->
         <li>
           <a href="#" class="hover:text-tertiary-darkpink">For sex workers</a>
         </li>
-        <li><Button variant="header">Støt</Button></li>
+        <li><Button href="stoet" variant="header">Støt</Button></li>
       </ul>
     </div>
 
@@ -79,6 +167,10 @@ import Heading from "./Heading.astro";
     </button>
   </nav>
 
+  <div class="fixed right-5 z-4 bottom-24 md:hidden">
+    <Button href="stoet" variant="header">Støt</Button>
+  </div>
+
   <!-- Mobil-menu -->
   <div
     id="mobilmenu"
@@ -86,26 +178,83 @@ import Heading from "./Heading.astro";
     x-transition
     x-on:click="showmenu = false"
     x-on:click.outside="showmenu = false"
-    class="fixed top-0 right-0 h-full w-full md:hidden bg-bordeaux flex flex-col items-center pt-30 gap-4 text-hf z-5 text-hf"
+    class="fixed top-0 right-0 h-full w-full pl-gutter md:hidden bg-bordeaux flex flex-col pt-6xl gap-4 text-hf z-5"
   >
-    <Heading htmlheading="h2" size="large2" stylingclasses=""
-      ><a
-        class="transition-colors duration-500 ease-in-out hover:text-tertiary-darkpink"
-        href="#">Om os</a
+    <!-- om os -->
+    <div x-data="{ open: false }" class="w-full">
+      <button @click.stop="open = !open" class="flex w-full gap-2">
+        <Heading
+          htmlheading="h2"
+          size="large2"
+          stylingclasses="transition-colors"
+        >
+          Om os
+        </Heading>
+      </button>
+
+      <div
+        x-show="open"
+        x-transition
+        class="mt-2 flex flex-col gap-xs text-base"
       >
-    </Heading>
-    <Heading htmlheading="h2" size="large2" stylingclasses=""
-      ><a
-        class="transition-colors duration-500 ease-in-out hover:text-tertiary-darkpink"
-        href="#">Bliv frivillig</a
+        <a href="vores-arbejde" class="hover:text-tertiary-darkpink"
+          >Vores arbejde</a
+        >
+        <a href="hvem-vi-er" class="hover:text-tertiary-darkpink">Hvem vi er</a>
+        <a href="historien" class="hover:text-tertiary-darkpink pb-md"
+          >Historien</a
+        >
+      </div>
+    </div>
+
+    <!-- bliv frivillig -->
+    <div x-data="{ open: false }" class="w-full">
+      <button @click.stop="open = !open" class="flex w-full gap-2">
+        <Heading
+          htmlheading="h2"
+          size="large2"
+          stylingclasses="transition-colors"
+        >
+          Bliv frivillig
+        </Heading>
+      </button>
+
+      <div
+        x-show="open"
+        x-transition
+        class="mt-2 flex flex-col gap-xs text-base"
       >
-    </Heading>
-    <Heading htmlheading="h2" size="large2" stylingclasses=""
-      ><a
-        class="transition-colors duration-500 ease-in-out hover:text-tertiary-darkpink"
-        href="#">Viden</a
+        <a href="bliv-frivillig" class="hover:text-tertiary-darkpink pb-md"
+          >Bliv frivillig</a
+        >
+      </div>
+    </div>
+
+    <!-- viden -->
+    <div x-data="{ open: false }" class="w-full">
+      <button @click.stop="open = !open" class="flex w-full gap-2">
+        <Heading
+          htmlheading="h2"
+          size="large2"
+          stylingclasses="transition-colors"
+        >
+          Viden
+        </Heading>
+      </button>
+
+      <div
+        x-show="open"
+        x-transition
+        class="mt-2 flex flex-col gap-xs text-base"
       >
-    </Heading>
+        <a href="artikler" class="hover:text-tertiary-darkpink">Artikler</a>
+        <a href="#" class="hover:text-tertiary-darkpink">Ressourcer</a>
+        <a href="#" class="hover:text-tertiary-darkpink pb-md"
+          >Oplæg og workshops</a
+        >
+      </div>
+    </div>
+
     <Heading htmlheading="h2" size="large2" stylingclasses=""
       ><a
         class="transition-colors duration-500 ease-in-out hover:text-tertiary-darkpink"
