@@ -5,11 +5,24 @@ import Text from "./Text.astro";
 ---
 
 <div class="grid md:grid-cols-3 gap-6">
-  <Heading
-    htmlheading="h2"
-    size="medium"
-    stylingclasses="uppercase md:col-span-1">{title}</Heading
+  <div
+    x-data="{ show: false }"
+    x-intersect.once="show = true"
+    class="overflow-hidden"
+    style="max-height: 30%"
   >
+    <!-- MASK -->
+    <div
+      class="transform transition-transform duration-500 easey-ease"
+      :class="show ? 'translate-y-0' : 'translate-y-full'"
+    >
+      <Heading
+        htmlheading="h2"
+        size="medium"
+        stylingclasses="uppercase md:col-span-1">{title}</Heading
+      >
+    </div>
+  </div>
 
   <div
     class={textCols === 2

@@ -3,13 +3,26 @@ import Heading from "./Heading.astro";
 const { title, text } = Astro.props;
 ---
 
-<div class="grid md:grid-cols-3">
-  <Heading htmlheading="h1" size="xlarge" stylingclasses="uppercase pb-md"
-    >{title}</Heading
+<div
+  x-data="{ show: false }"
+  x-intersect.once="show = true"
+  class="overflow-hidden"
+  style="max-height: 50%"
+>
+  <!-- MASK -->
+  <div
+    class="transform transition-transform duration-1000 easey-ease"
+    :class="show ? 'translate-y-0' : 'translate-y-15'"
   >
-  <Heading
-    htmlheading="h2"
-    size="xsmall"
-    stylingclasses="md:col-start-2 md:col-span-2 pb-3xl">{text}</Heading
-  >
+    <div class="grid md:grid-cols-3">
+      <Heading htmlheading="h1" size="xlarge" stylingclasses="uppercase pb-md"
+        >{title}</Heading
+      >
+      <Heading
+        htmlheading="h2"
+        size="xsmall"
+        stylingclasses="md:col-start-2 md:col-span-2 pb-3xl">{text}</Heading
+      >
+    </div>
+  </div>
 </div>
