@@ -31,7 +31,7 @@ import Button from "./Button.astro";
     <button
       type="button"
       @click="active = 'once'"
-      class="relative z-10 w-1/2 uppercase font-bold text-dark text-base transition-colors"
+      class="relative z-10 w-1/2 uppercase font-bold transition-colors"
       :class="active === 'once' ? 'text-light' : ''"
     >
       Enkel donation
@@ -39,7 +39,7 @@ import Button from "./Button.astro";
   </div>
 
   <div x-show="step === 1">
-    <Text teksttype="formtekst" stylingclasses="text-dark pt-xl pb-md">
+    <Text teksttype="basemedium" stylingclasses="text-dark pt-xl pb-md">
       Månedligt beløb
     </Text>
 
@@ -59,7 +59,7 @@ import Button from "./Button.astro";
         />
         <span
           ><Text
-            teksttype="formtekst"
+            teksttype="basemedium"
             stylingclasses="text-dark text-[12px] lg:text-base">75 kr.</Text
           ></span
         >
@@ -80,7 +80,7 @@ import Button from "./Button.astro";
         />
         <span
           ><Text
-            teksttype="formtekst"
+            teksttype="basemedium"
             stylingclasses="text-dark text-[12px] lg:text-base">100 kr.</Text
           ></span
         >
@@ -101,7 +101,7 @@ import Button from "./Button.astro";
         />
         <span
           ><Text
-            teksttype="formtekst"
+            teksttype="basemedium"
             stylingclasses="text-dark text-[12px] lg:text-base">200 kr.</Text
           >
         </span>
@@ -132,7 +132,7 @@ import Button from "./Button.astro";
   </div>
 
   <div x-show="step === 2">
-    <Text teksttype="formtekst" stylingclasses="text-dark pt-xl pb-md">
+    <Text teksttype="basemedium" stylingclasses="text-dark pt-xl pb-md">
       Betalingsmetode
     </Text>
 
@@ -151,7 +151,7 @@ import Button from "./Button.astro";
       focus:ring-0 border-0"
         />
         <span
-          ><Text teksttype="formtekst" stylingclasses="text-dark"
+          ><Text teksttype="basemedium" stylingclasses="text-dark"
             >MobilePay</Text
           ></span
         >
@@ -171,7 +171,7 @@ import Button from "./Button.astro";
       focus:ring-0 border-0"
         />
         <span
-          ><Text teksttype="formtekst" stylingclasses="text-dark">Kort</Text>
+          ><Text teksttype="basemedium" stylingclasses="text-dark">Kort</Text>
         </span>
       </label>
     </div>
@@ -179,8 +179,7 @@ import Button from "./Button.astro";
     <!-- Fulde navn -->
     <div class="flex flex-col w-80.25 lg:w-96.75 pb-xl">
       <label for="selvvalgt"
-        ><Text teksttype="formtekst" stylingclasses="text-dark text-base pb-xs"
-          >Fulde navn</Text
+        ><Text teksttype="basemedium" stylingclasses="pb-xs">Fulde navn</Text
         ></label
       >
       <input type="text" id="navn" name="navn" class="rounded-xs border-0" />
@@ -190,9 +189,7 @@ import Button from "./Button.astro";
       <!-- e-mail -->
       <div class="flex flex-col w-37.5 lg:w-46 pb-xl">
         <label for="email"
-          ><Text
-            teksttype="formtekst"
-            stylingclasses="text-dark text-base pb-xs">E-mail</Text
+          ><Text teksttype="basemedium" stylingclasses="pb-xs">E-mail</Text
           ></label
         >
         <input
@@ -206,9 +203,7 @@ import Button from "./Button.astro";
       <!-- mobilnummer -->
       <div class="flex flex-col w-37.5 lg:w-46">
         <label for="mobilnummer"
-          ><Text
-            teksttype="formtekst"
-            stylingclasses="text-dark text-base pb-xs">Mobilnummer</Text
+          ><Text teksttype="basemedium" stylingclasses="pb-xs">Mobilnummer</Text
           ></label
         >
         <input type="tel" id="tel" name="tel" class="rounded-xs border-0" />
