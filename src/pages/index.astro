@@ -27,9 +27,13 @@ import Spacing from "../components/Spacing.astro";
       Vi støtter sexarbejdere i deres ret til et trygt og værdigt arbejdsliv.
     </Heading>
   </section>
-  <section class="bg-pink px-gutter py-2xl grid md:grid-cols-2 md:px-2xl">
+  <section class="bg-pink px-gutter grid md:grid-cols-2 md:px-2xl md:py-3xl">
     <div>
-      <Heading htmlheading="h1" size="xlarge" stylingclasses="uppercase pb-md">
+      <Heading
+        htmlheading="h1"
+        size="xlarge"
+        stylingclasses="uppercase pb-md pt-3xl"
+      >
         Støt vores mission
       </Heading>
       <Heading
@@ -46,75 +50,80 @@ import Spacing from "../components/Spacing.astro";
 
       <Button href="/vores-arbejde" variant="light">Vores arbejde</Button>
     </div>
-    <div class="mx-auto pb-3xl">
+    <div class="mx-auto pb-2xl pt-3xl">
       <Stoetform />
     </div>
+  </section>
 
-    <!-- MOBIL -->
-    <div x-data="{ index: 0 }" class="w-full lg:hidden">
-      <Heading htmlheading="h2" size="large" stylingclasses="uppercase"
-        >Det går din donation til</Heading
-      >
-      <!-- BILLEDE -->
-      <div class="overflow-hidden">
-        <img x-show="index === 0" src="/mad.svg" class="w-full" />
-        <img x-show="index === 1" src="/sokker.svg" class="w-full" />
-        <img x-show="index === 2" src="/kondom2.svg" class="w-full" />
-        <img x-show="index === 3" src="/soap.svg" class="w-full" />
+  <div class="border-b-accent-red border-b md:px-2xl"></div>
+
+  <section class="bg-pink px-gutter py-2xl md:pt-3xl md:pb-5xl md:px-2xl">
+    <div x-data="{ index: 0 }" class="w-full">
+      <Heading htmlheading="h2" size="large" stylingclasses="uppercase pb-xl">
+        Det går din donation til
+      </Heading>
+
+      <div class="grid md:grid-cols-4 gap-4xl">
+        <!-- ITEM 0 -->
+        <div :class="index === 0 ? 'block' : 'hidden md:block'">
+          <img src="/mad.svg" class="mb-md" />
+          <Heading htmlheading="h3" size="small" stylingclasses="uppercase">
+            Varme måltider
+          </Heading>
+          <Text>
+            Vi sørger for, at der altid er varme drikkevarer og måltider til
+            rådighed, for dem der skulle have brug for det, i løbet af en aften.
+          </Text>
+        </div>
+
+        <!-- ITEM 1 -->
+        <div :class="index === 1 ? 'block' : 'hidden md:block'">
+          <img src="/sokker.svg" class="mb-md" />
+          <Heading htmlheading="h3" size="small" stylingclasses="uppercase">
+            Fodvarme
+          </Heading>
+          <Text>
+            Vi tilbyder gratis fodvarmere til sexarbejdere der er tilstede i
+            gadebilledet, hvis vejret er koldt.
+          </Text>
+        </div>
+
+        <!-- ITEM 2 -->
+        <div :class="index === 2 ? 'block' : 'hidden md:block'">
+          <img src="/kondom2.svg" class="mb-md" />
+          <Heading htmlheading="h3" size="small" stylingclasses="uppercase">
+            Beskyttelse
+          </Heading>
+          <Text>
+            The Red Van har altid beskyttelse til rådighed, gratis og
+            tilgængeligt.
+          </Text>
+        </div>
+
+        <!-- ITEM 3 -->
+        <div :class="index === 3 ? 'block' : 'hidden md:block'">
+          <img src="/soap.svg" class="mb-md" />
+          <Heading htmlheading="h3" size="small" stylingclasses="uppercase">
+            Hygiejneprodukter
+          </Heading>
+          <Text>
+            Vi tilbyder diverse hygiejneprodukter til brugere af vanen og sørger
+            altid for at holde faciliteterne rene og pæne.
+          </Text>
+        </div>
       </div>
 
-      <!-- TEKST -->
-
-      <span x-show="index === 0"
-        ><Heading htmlheading="h3" size="small" stylingclasses="uppercase"
-          >Varme måltider</Heading
-        >
-        <Text
-          >Vi sørger for, at der altid er varme drikkevarer og måltider til
-          rådighed, for dem der skulle have brug for det, i løbet af en aften.
-        </Text></span
-      >
-      <span x-show="index === 1"
-        ><Heading htmlheading="h3" size="small" stylingclasses="uppercase"
-          >Fodvarme</Heading
-        >
-        <Text
-          >Vi tilbyder gratis fodvarmere til sexarbejdere der er tilstede i
-          gadebilledet, hvis vejret er koldt.
-        </Text></span
-      >
-      <span x-show="index === 2"
-        ><Heading htmlheading="h3" size="small" stylingclasses="uppercase"
-          >Beskyttelse</Heading
-        >
-        <Text
-          >The Red Van har altid beskyttelse til rådighed, gratis og
-          tilgængeligt.
-        </Text></span
-      >
-      <span x-show="index === 3"
-        ><Heading htmlheading="h3" size="small" stylingclasses="uppercase"
-          >Hygiejneprodukter</Heading
-        >
-        <Text
-          >Vi tilbyder diverse hygiejneprodukter til brugere af vanen, og sørger
-          altid for at holde faciliteterne rene og pæne.
-        </Text></span
-      >
-
-      <!-- PILE -->
-      <div class="mt-4 flex justify-center gap-8">
+      <!-- PILE – KUN MOBIL -->
+      <div class="mt-6 flex justify-center gap-8 md:hidden">
         <button @click="index = (index + 3) % 4">
-          <img src="/pil-tilbage.svg" alt="" />
+          <img src="/pil-tilbage.svg" alt="Tilbage" />
         </button>
-
         <button @click="index = (index + 1) % 4">
-          <img src="/pil-frem.svg" alt="" />
+          <img src="/pil-frem.svg" alt="Frem" />
         </button>
       </div>
     </div>
   </section>
-  <!-- karrusel her -->
 
   <section
     class="bg-bordeaux px-gutter py-2xl md:px-2xl md:py-5xl grid md:grid-cols-3"
