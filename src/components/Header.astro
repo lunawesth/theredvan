@@ -5,157 +5,127 @@ import Heading from "./Heading.astro";
 
 <header
   x-data="{ showmenu: false }"
-  class="bg-nav px-gutter py-md lg:px-2xl lg:py-lg"
+  class="bg-nav px-gutter py-md lg:px-2xl lg:py-lg fixed top-0 left-0 w-full z-10"
 >
   <nav class="flex flex-row items-center justify-between font-medium text-base">
     <div class="flex justify-between gap-2">
       <!-- Logo -->
-      <img
-        src="/logo.png"
-        alt="Billede af The Red Vans logo"
-        class="h-8.25 z-10"
-      />
+      <a href="/">
+        <img
+          src="/logo.png"
+          alt="Billede af The Red Vans logo"
+          class="h-8.25 z-100"
+        />
+      </a>
 
-      <img
-        src="logo-text.png"
-        alt="The Red Van"
-        class="hidden md:block md:w-70 lg:w-110"
-      />
+      <a href="/">
+        <img
+          src="/logo-text.png"
+          alt="The Red Van"
+          class="hidden md:block md:w-70 lg:w-110"
+        />
+      </a>
     </div>
 
     <!-- Menu (desktop) -->
     <div>
-      <ul class="hidden md:flex md:flex-row md:items-center gap-8 text-hf">
+      <ul class="hidden md:flex md:items-center gap-8 text-hf">
+        <!-- Om os -->
         <li class="relative group">
-          <a
-            href="#"
-            class="transition-colors duration-500 ease-in-out hover:text-tertiary-darkpink"
-          >
-            Om os
-          </a>
+          <a href="#" class="hover:text-tertiary-darkpink">Om os</a>
 
           <ul
-            class="absolute left-0 top-full mt-3 min-w-60
-                   bg-bordeaux
-                   opacity-0 invisible
-                   transition-all duration-200
+            class="absolute -left-5 top-full mt-3 min-w-60 bg-bordeaux
+                   opacity-0 invisible transition-all duration-200
                    group-hover:opacity-100 group-hover:visible"
           >
             <li>
               <a
                 href="vores-arbejde"
-                class="block px-4 py-2 hover:text-tertiary-darkpink"
+                class="block px-5 py-2 hover:text-tertiary-darkpink"
+                >Vores arbejde</a
               >
-                Vores arbejde
-              </a>
             </li>
             <li>
               <a
                 href="hvem-vi-er"
-                class="block px-4 py-2 hover:text-tertiary-darkpink"
-              >
-                Hvem vi er
-              </a>
+                class="block px-5 py-2 hover:text-tertiary-darkpink"
+                >Hvem vi er</a>
             </li>
             <li>
               <a
                 href="historien"
-                class="block px-4 py-2 hover:text-tertiary-darkpink"
+                class="block px-5 pt-2 pb-4 hover:text-tertiary-darkpink"
+                >Historien</a
               >
-                Historien
-              </a>
             </li>
           </ul>
         </li>
 
-        <!-- bliv frivillig -->
-        <li class="relative group">
-          <a
-            href="bliv-frivillig"
-            class="transition-colors duration-500 ease-in-out hover:text-tertiary-darkpink"
-          >
+        <!-- Bliv frivillig -->
+        <li>
+          <a href="bliv-frivillig" class="hover:text-tertiary-darkpink">
             Bliv frivillig
           </a>
-          <li>
-            <!-- viden -->
-            <li class="relative group">
-              <a
-                href="#"
-                class="transition-colors duration-500 ease-in-out hover:text-tertiary-darkpink"
-              >
-                Viden
-              </a>
-
-              <ul
-                class="absolute left-0 top-full mt-3 min-w-60
-                   bg-bordeaux
-                   opacity-0 invisible
-                   transition-all duration-200
-                   group-hover:opacity-100 group-hover:visible"
-              >
-                <li>
-                  <a
-                    href="artikler"
-                    class="block px-4 py-2 hover:text-tertiary-darkpink"
-                  >
-                    Artikler
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="block px-4 py-2 hover:text-tertiary-darkpink"
-                  >
-                    Ressourcer
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="block px-4 py-2 hover:text-tertiary-darkpink"
-                  >
-                    Oplæg og vorkshops
-                  </a>
-                </li>
-              </ul>
-            </li>
-
-            <!-- merch -->
-            <li>
-              <a
-                href="#"
-                class="transition-colors duration-500 ease-in-out hover:text-tertiary-darkpink"
-                >Merch</a
-              >
-            </li>
-
-            <!-- for sex workers -->
-            <li>
-              <a href="#" class="hover:text-tertiary-darkpink"
-                >For sex workers</a
-              >
-            </li>
-            <li><Button href="stoet" variant="header">Støt</Button></li>
-          </li>
         </li>
 
-        <!-- Burger-knap (kun mobil) -->
-        <button
-          id="burger"
-          class="md:hidden flex flex-col gap-1.5 cursor-pointer z-10"
-          x-on:click="showmenu = ! showmenu"
-        >
-          <span
-            class="block h-0.5 w-8 bg-pink transition-all duration-300"
-            :class="showmenu ? 'rotate-45 translate-y-2' : ''"></span>
-          <span
-            class="block h-0.5 w-8 bg-pink transition-all duration-300"
-            :class="showmenu ? 'opacity-0' : 'opacity-100'"></span>
-          <span
-            class="block h-0.5 w-8 bg-pink transition-all duration-300"
-            :class="showmenu ? '-rotate-45 -translate-y-2' : ''"></span>
-        </button>
+        <!-- Viden -->
+        <li class="relative group">
+          <a href="#" class="hover:text-tertiary-darkpink">Viden</a>
+
+          <ul
+            class="absolute -left-5 top-full mt-3 min-w-60 bg-bordeaux
+                   opacity-0 invisible transition-all duration-200
+                   group-hover:opacity-100 group-hover:visible"
+          >
+            <li>
+              <a
+                href="artikler"
+                class="block px-5 py-2 hover:text-tertiary-darkpink"
+                >Artikler</a>
+            </li>
+            <li>
+              <a href="#" class="block px-5 py-2 hover:text-tertiary-darkpink"
+                >Ressourcer</a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block px-5 pt-2 pb-4 hover:text-tertiary-darkpink"
+                >Oplæg og workshops</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <!-- Merch -->
+        <li><a href="#" class="hover:text-tertiary-darkpink">Merch</a></li>
+
+        <!-- For sex workers -->
+        <li>
+          <a href="#" class="hover:text-tertiary-darkpink">For sex workers</a>
+        </li>
+
+        <!-- Støt -->
+        <li><Button href="stoet" variant="header">Støt</Button></li>
       </ul>
+
+      <!-- Burger-knap (kun mobil) -->
+      <button
+        id="burger"
+        class="md:hidden flex flex-col gap-1.5 cursor-pointer z-10"
+        x-on:click="showmenu = ! showmenu"
+      >
+        <span
+          class="block h-0.5 w-8 bg-pink transition-all duration-300 z-10"
+          :class="showmenu ? 'rotate-45 translate-y-2' : ''"></span>
+        <span
+          class="block h-0.5 w-8 bg-pink transition-all duration-300"
+          :class="showmenu ? 'opacity-0' : 'opacity-100'"></span>
+        <span
+          class="block h-0.5 w-8 bg-pink transition-all duration-300 z-10"
+          :class="showmenu ? '-rotate-45 -translate-y-2' : ''"></span>
+      </button>
 
       <div class="fixed right-5 z-4 bottom-24 md:hidden">
         <Button href="stoet" variant="header">Støt</Button>

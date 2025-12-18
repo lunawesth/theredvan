@@ -4,7 +4,6 @@ import Button from "../components/Button.astro";
 import HeadingParagraf from "../components/HeadingParagraf.astro";
 import Card from "../components/Card.astro";
 import TextParagraf from "../components/TextParagraf.astro";
-import Link from "../components/Link.astro";
 import Heading from "../components/Heading.astro";
 import Text from "../components/Text.astro";
 ---
@@ -29,7 +28,7 @@ import Text from "../components/Text.astro";
       size="large"
       stylingclasses="uppercase pt-4xl md:pb-lg">Sekretariatet</Heading
     >
-    <div class="grid md:grid-cols-4 gap-gutter">
+    <div class="grid md:grid-cols-4 gap-gutter md:pb-4xl">
       <Card
         image="om-os-jelena.webp"
         descr="Billede af Jelena"
@@ -51,8 +50,12 @@ import Text from "../components/Text.astro";
         undertitle="Sekretariatsleder"
         text="Leder sekretariatets arbejde og startegiske og organnisatoriske udvikling."
       />
+      <img
+        src="dragonfly.png"
+        alt="Grafisk dragonfly"
+        class="place-self-end md:my-auto"
+      />
     </div>
-    <img src="dragonfly.png" alt="Grafisk dragonfly" />
   </section>
   <section class="bg-pink px-gutter py-3xl md:px-2xl md:py-4xl">
     <TextParagraf title="Vores bestyrelse" textCols={1}>

@@ -1,7 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
-import Link from "../components/Link.astro";
 import Heading from "../components/Heading.astro";
 import Text from "../components/Text.astro";
 import Card from "../components/Card.astro";
@@ -17,7 +16,11 @@ import Stoetform from "../components/Stoetform.astro";
       alt="Billede af kvinde i The Red Van"
       class="py-2xl place-self-center"
     />
-    <Heading htmlheading="h2" size="xsmall" stylingclasses="text-hero">
+    <Heading
+      htmlheading="h2"
+      size="medium"
+      stylingclasses="text-hero font-regular"
+    >
       Vi støtter sexarbejdere i deres ret til et trygt og værdigt arbejdsliv.
     </Heading>
   </section>
@@ -35,7 +38,7 @@ import Stoetform from "../components/Stoetform.astro";
       <Button variant="light">Vores arbejde</Button>
     </div>
 
-    <div class="mx-auto py-3xl">
+    <div class="mx-auto pb-3xl">
       <Stoetform />
     </div>
 
@@ -139,7 +142,7 @@ import Stoetform from "../components/Stoetform.astro";
       stylingclasses="uppercase pb-xl md:pb-2xl"
       >Vores tre kerneværdier:</Heading
     >
-    <div class="grid md:grid-cols-3 md:grid-rows-3 pb-3xl md:gap-gutter">
+    <div class="grid md:grid-cols-3 md:gap-gutter">
       <Card
         header="01"
         title="Sex work is work"
@@ -157,12 +160,16 @@ import Stoetform from "../components/Stoetform.astro";
         title="Rights not rescue"
         text="Vi mener, at sexarbejdere skal beskyttes med rettigheder frem for at blive reddet, fordi vi ved, at mange står uden alternative måder at forsørge sig selv og deres familier."
       />
-      <div
-        class="md:col-start-2 md:col-end-4 md:row-start-2 md:row-end-4 md:place-items-stretch pt-3xl pb-xl md:pt-4xl md:pb-0"
-      >
-        <img src="foredrag.webp" alt="Billede af foredragsholdere" />
-      </div>
-      <div class="md:col-start-1 md:col-end-2 md:row-start-3 md:row-end-4">
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-gutter">
+      <img
+        src="foredrag.webp"
+        alt="Billede af foredragsholdere"
+        class="pt-3xl pb-xl md:pt-4xl md:pb-0 md:col-start-2 md:col-end-4"
+      />
+
+      <div class="md:col-sart-1 md:col-end-2 md:self-end md:row-start-1">
         <Text teksttype="basemedium" stylingclasses=" pb-xl">
           Vi elsker at fortælle om vores organisation og det vi står for. Derfor
           holder vi workshops og talks, hvor vi enten kommer ud, eller viser
@@ -172,12 +179,17 @@ import Stoetform from "../components/Stoetform.astro";
       </div>
     </div>
   </section>
+
   <section class="bg-pink px-gutter py-3xl md:px-2xl">
     <Heading htmlheading="h2" size="xlarge" stylingclasses="uppercase  pb-md"
       >Artikler</Heading
     >
-    <div class="grid md:grid-cols-2 md:pb-5xl">
-      <Heading htmlheading="h3" size="xsmall" stylingclasses=" pb-6xl">
+    <div class="grid md:grid-cols-2 md:pb-xl">
+      <Heading
+        htmlheading="h3"
+        size="xsmall"
+        stylingclasses=" pb-6xl md:pb-5xl"
+      >
         Vi lægger vægt på, at sexarbejdere skal have de samme rettigheder og
         beskyttelse som andre arbejdstagere, og vi engagerer os i at skabe
         opmærksomhed omkring deres vilkår.
@@ -186,13 +198,13 @@ import Stoetform from "../components/Stoetform.astro";
       </Heading>
       <img src="forside4.png" alt="Billede af rød kuglepen" />
     </div>
-    <div class="border-y-accent-red border-y py-md md:pb-xl">
+    <div class="border-y-accent-red border-y py-md md:py-0">
       <List
         title="D. 20/11/25"
         text="Den danske lovgivning om sexarbejde og The Red Vans bud på forbedringer"
       />
     </div>
-    <div class="border-b-accent-red border-b py-md mb-xl">
+    <div class="border-b-accent-red border-b py-md mb-xl md:py-0">
       <List
         title="D. 19/10/25"
         text="Hvordan påvirker sæsonskiftet gadebaseret sexarbejdere?"
