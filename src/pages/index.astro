@@ -6,15 +6,17 @@ import Text from "../components/Text.astro";
 import Card from "../components/Card.astro";
 import List from "../components/List.astro";
 import Stoetform from "../components/Stoetform.astro";
+import Spacing from "../components/Spacing.astro";
 ---
 
 <MainLayout title="Forside">
-  <section class="bg-bordeaux px-gutter py-2xl md:px-2xl">
+  <Spacing />
+  <section class="bg-bordeaux px-gutter py-2xl md:px-2xl md:pt-xl">
     <img src="/logo-text.png" alt="The Red Van" class="md:hidden" />
     <img
       src="/forside-hero.webp"
       alt="Billede af kvinde i The Red Van"
-      class="py-2xl place-self-center"
+      class="py-2xl place-self-center w-full md:pt-0 md:py-lg"
     />
     <Heading
       htmlheading="h2"
@@ -36,7 +38,7 @@ import Stoetform from "../components/Stoetform.astro";
         skadesreducerende og kæmper aktivt for sexarbejderes rettigheder.
       </Heading>
 
-      <Button variant="light">Vores arbejde</Button>
+      <Button href="/vores-arbejde" variant="light">Vores arbejde</Button>
     </div>
     <div class="mx-auto pb-3xl">
       <Stoetform />
@@ -132,7 +134,7 @@ import Stoetform from "../components/Stoetform.astro";
         fredag og lørdag nat, hvor vi tilbyder kaffe og kondomer og er med til
         at skabe en tryggere interaktion mellem sexarbejdere og købere.
       </Text>
-      <Button variant="light">Bliv frivillig</Button>
+      <Button href="bliv-frivillig" variant="light">Bliv frivillig</Button>
     </div>
   </section>
   <section class="bg-blue px-gutter py-2xl md:pt-3xl md:pb-4xl md:px-2xl">
@@ -211,7 +213,7 @@ import Stoetform from "../components/Stoetform.astro";
       />
     </div>
     <div class="place-self-end">
-      <Button variant="light">Se alle artikler</Button>
+      <Button href="/artikler" variant="light">Se alle artikler</Button>
     </div>
   </section>
 </MainLayout>
