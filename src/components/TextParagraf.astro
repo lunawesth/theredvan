@@ -8,8 +8,7 @@ import Text from "./Text.astro";
   <div
     x-data="{ show: false }"
     x-intersect.once="show = true"
-    class="overflow-hidden"
-    style="max-height: 30%"
+    class="overflow-hidden max-h-fit"
   >
     <!-- MASK -->
     <div

@@ -1,14 +1,16 @@
 ---
 const {
-  htmlheading = "",
+  htmlheading = "h2",
   size = "medium",
   font = undefined,
   stylingclasses = "",
+  wrapperClasses = "",
+  animate = true,
 } = Astro.props;
+
 const Htmlheading = htmlheading;
 
 const baseTextColor = "text-dark";
-
 const mergedStylingClasses = `${baseTextColor} ${stylingclasses ?? ""}`;
 
 const sizeClasses = {
@@ -34,6 +36,29 @@ const defaultFontForSize = {
 const fontClass = font ?? defaultFontForSize[size];
 ---
 
-<Htmlheading class:list={[sizeClasses[size], fontClass, mergedStylingClasses]}>
-  <slot />
-</Htmlheading>
+{
+  animate ? (
+    <div
+      x-data="{ show: false }"
+      x-intersect.once="show = true"
+      class={`overflow-hidden ${wrapperClasses}`}
+    >
+      <div
+        class="transform transition-transform duration-500 ease-out"
+        x-bind:class="show ? 'translate-y-0' : 'translate-y-15'"
+      >
+        <Htmlheading
+          class:list={[sizeClasses[size], fontClass, mergedStylingClasses]}
+        >
+          <slot />
+        </Htmlheading>
+      </div>
+    </div>
+  ) : (
+    <Htmlheading
+      class:list={[sizeClasses[size], fontClass, mergedStylingClasses]}
+    >
+      <slot />
+    </Htmlheading>
+  )
+}
