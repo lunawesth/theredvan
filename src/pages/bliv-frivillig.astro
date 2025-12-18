@@ -73,7 +73,7 @@ import Spacing from "../components/Spacing.astro";
       >Send en ansøgning!</Heading
     >
 
-    <div class="mx-auto">
+    <div class="flex place-self-center pt-xl">
       <form x-data="{ step: 1 }">
         <div x-show="step === 1">
           <!-- Fulde navn -->
@@ -127,7 +127,7 @@ import Spacing from "../components/Spacing.astro";
           </div>
 
           <!-- checkbox -->
-          <div class="flex flex-row gap-3xl">
+          <div class="flex flex-row gap-3xl pb-xl">
             <div class="flex flex-col gap-md">
               <!-- pronominer -->
               <Text teksttype="basemedium" stylingclasses="">Pronominer</Text>
@@ -244,6 +244,191 @@ import Spacing from "../components/Spacing.astro";
             <Button @click="step = step + 1" variant="light" type="button"
               >Videre</Button
             >
+          </div>
+        </div>
+
+        <div x-show="step === 2">
+          <div class="flex flex-col w-88.25 lg:w-96.75 pb-xl">
+            <label for="besked"
+              ><Text
+                teksttype="basemedium"
+                stylingclasses="text-dark text-base pb-xs">Lidt om dig</Text
+              ></label
+            >
+            <textarea
+              id="besked"
+              name="besked"
+              rows="3"
+              class="rounded-xs border-0"></textarea>
+          </div>
+          <div class="flex flex-col w-88.25 lg:w-96.75 pb-xl">
+            <label for="besked"
+              ><Text
+                teksttype="basemedium"
+                stylingclasses="text-dark text-base pb-xs"
+                >Hvorfor er du interesseret i at være frivillig?</Text
+              ></label
+            >
+            <textarea
+              id="besked"
+              name="besked"
+              rows="3"
+              class="rounded-xs border-0"></textarea>
+          </div>
+          <div class="flex flex-col w-88.25 lg:w-96.75 pb-xl">
+            <label for="besked"
+              ><Text
+                teksttype="basemedium"
+                stylingclasses="text-dark text-base pb-xs"
+                >Hvad er dit syn på sexarbejde?</Text
+              ></label
+            >
+            <textarea
+              id="besked"
+              name="besked"
+              rows="3"
+              class="rounded-xs border-0"></textarea>
+          </div>
+          <div class="flex flex-col w-88.25 lg:w-96.75 pb-xl">
+            <label for="besked"
+              ><Text
+                teksttype="basemedium"
+                stylingclasses="text-dark text-base pb-xs"
+                >Har du noget erfaring som er relevant ift. den her rolle?</Text
+              ></label
+            >
+            <textarea
+              id="besked"
+              name="besked"
+              rows="3"
+              class="rounded-xs border-0"></textarea>
+          </div>
+
+          <!-- NÆSTE TRIN KNAP -->
+          <div class="flex justify-end gap-md">
+            <Button type="button" @click="step = 1" variant="light"
+              >Tilbage</Button
+            >
+            <Button @click="step = step + 1" variant="light" type="button"
+              >Videre</Button
+            >
+          </div>
+        </div>
+        <div x-show="step === 3">
+          <div class="flex flex-col gap-md pb-xl">
+            <!-- interesser -->
+            <Text teksttype="basemedium" stylingclasses=""
+              >Kunne du være interesseret i en af de her grupper hos The Red
+              Van?</Text
+            >
+
+            <!-- SoMe og kommunikation -->
+            <label class="flex items-center gap-5 cursor-pointer">
+              <input
+                type="radio"
+                name="interesser"
+                value="SoMe og kommunikation"
+                class="w-7 h-7 rounded-full bg-greywhite
+            checked:shadow-[inset_0_0_0_30px_#321F26]
+            transition focus:outline-none focus:ring-0 border-0"
+              />
+              <span
+                ><Text teksttype="base" stylingclasses="text-dark"
+                  >SoMe og kommunikation</Text
+                ></span
+              >
+            </label>
+
+            <!-- Merch og design -->
+            <label class="flex items-center gap-5 cursor-pointer">
+              <input
+                type="radio"
+                name="interesser"
+                value="merch og design"
+                class="w-7 h-7 rounded-full bg-greywhite
+              checked:shadow-[inset_0_0_0_30px_#321F26]
+              transition focus:outline-none focus:ring-0 border-0"
+              />
+              <span
+                ><Text teksttype="base" stylingclasses="text-dark"
+                  >Merch og design</Text
+                ></span
+              >
+            </label>
+
+            <!-- Event planlægning -->
+            <label class="flex items-center gap-5 cursor-pointer">
+              <input
+                type="radio"
+                name="interesser"
+                value="event planlægning"
+                class="w-7 h-7 rounded-full bg-greywhite
+                checked:shadow-[inset_0_0_0_30px_#321F26]
+                transition focus:outline-none focus:ring-0 border-0"
+              />
+              <span
+                ><Text teksttype="base" stylingclasses="text-dark"
+                  >Event planlægning</Text
+                ></span
+              >
+            </label>
+
+            <!-- Frivillig omsorg og community -->
+            <label class="flex items-center gap-5 cursor-pointer">
+              <input
+                type="radio"
+                name="interesser"
+                value="Frivillig omsorg og community"
+                class="w-7 h-7 rounded-full bg-greywhite
+                checked:shadow-[inset_0_0_0_30px_#321F26]
+                transition focus:outline-none focus:ring-0 border-0"
+              />
+              <span
+                ><Text teksttype="base" stylingclasses="text-dark"
+                  >Frivillig omsorg og community</Text
+                ></span
+              >
+            </label>
+
+            <!-- Kendskab og metoder -->
+            <label class="flex items-center gap-5 cursor-pointer">
+              <input
+                type="radio"
+                name="interesser"
+                value="Kendskab og metoder"
+                class="w-7 h-7 rounded-full bg-greywhite
+                checked:shadow-[inset_0_0_0_30px_#321F26]
+                transition focus:outline-none focus:ring-0 border-0"
+              />
+              <span
+                ><Text teksttype="base" stylingclasses="text-dark"
+                  >Kendskab og metoder</Text
+                ></span
+              >
+            </label>
+
+            <!-- Van og vedligeholdelse -->
+            <label class="flex items-center gap-5 cursor-pointer">
+              <input
+                type="radio"
+                name="interesser"
+                value="Van og vedligeholdelse"
+                class="w-7 h-7 rounded-full bg-greywhite
+                checked:shadow-[inset_0_0_0_30px_#321F26]
+                transition focus:outline-none focus:ring-0 border-0"
+              />
+              <span
+                ><Text teksttype="base" stylingclasses="text-dark"
+                  >Van og vedligeholdelse</Text
+                ></span
+              >
+            </label>
+          </div>
+          <div class="flex justify-end gap-md">
+            <Button type="button" @click="step = 2" variant="light"
+              >Tilbage</Button
+            >
+            <Button variant="dark">Ansøg</Button>
           </div>
         </div>
       </form>
