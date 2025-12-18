@@ -5,9 +5,9 @@ import Heading from "./Heading.astro";
 
 <header
   x-data="{ showmenu: false }"
-  class="bg-nav px-gutter py-md lg:px-2xl lg:py-lg fixed top-0 left-0 w-full z-10"
+  class="bg-nav px-gutter py-md lg:px-2xl lg:py-gutter fixed top-0 left-0 w-full z-10"
 >
-  <nav class="flex flex-row items-center justify-between font-medium text-base">
+  <nav class="flex flex-row items-center justify-between text-base">
     <div class="flex justify-between gap-2">
       <!-- Logo -->
       <a href="/">
@@ -22,14 +22,14 @@ import Heading from "./Heading.astro";
         <img
           src="/logo-text.png"
           alt="The Red Van"
-          class="hidden md:block md:w-70 lg:w-110"
+          class="hidden md:block md:w-60 lg:w-80"
         />
       </a>
     </div>
 
     <!-- Menu (desktop) -->
     <div>
-      <ul class="hidden md:flex md:items-center gap-8 text-hf">
+      <ul class="hidden md:flex md:items-center gap-12 text-hf">
         <!-- Om os -->
         <li class="relative group">
           <a href="#" class="hover:text-tertiary-darkpink">Om os</a>

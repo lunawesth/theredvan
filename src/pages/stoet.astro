@@ -7,9 +7,11 @@ import Heading from "../components/Heading.astro";
 import Card from "../components/Card.astro";
 import TextParagraf from "../components/TextParagraf.astro";
 import Stoetform from "../components/Stoetform.astro";
+import Spacing from "../components/Spacing.astro";
 ---
 
 <MainLayout title="Støt">
+  <Spacing />
   <section class="bg-pink px-gutter py-3xl md:px-2xl md:py-4xl">
     <HeadingParagraf
       title="Støt vores arbejde"
@@ -77,14 +79,14 @@ import Stoetform from "../components/Stoetform.astro";
         Når du har opsat din donation, modtager du en mail med information om, hvordan
         du får din plakat tilsendt.
       </Heading>
-      <Button variant="light">Se vores merch</Button>
+      <Button href="#merch" variant="light">Se vores merch</Button>
     </div>
 
     <div class="md:col-start-5 md:col-end-7">
       <img src="/plakat.webp" alt="Billede af plakat" class="pt-3xl md:pt-0" />
     </div>
   </section>
-  <section class="bg-pink px-gutter py-3xl md:px-2xl md:py-4xl">
+  <section class="bg-pink px-gutter py-3xl md:px-2xl md:py-4xl" id="merch">
     <TextParagraf title="Doner med stil" textCols={1}
       >Støt The Red Van ved at købe vores fede merch. <br />Vi har alt fra
       t-shirts til muleposer!
