@@ -23,9 +23,21 @@ const {
   }
   {
     header !== "false" && (
+        <div
+    x-data="{ show: false }"
+    x-intersect.once="show = true"
+    class="overflow-hidden max-h-fit"
+  >
+    <!-- MASK -->
+    <div
+      class="transform transition-transform duration-500 ease-linear"
+      :class="show ? 'translate-y-0' : 'translate-y-full'"
+    >
       <Heading htmlheading="h3" size="medium" stylingclasses="uppercase pt-xl">
         {header}
       </Heading>
+    </div>
+  </div>
     )
   }
   {
