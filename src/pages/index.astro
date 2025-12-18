@@ -10,9 +10,9 @@ import Stoetform from "../components/Stoetform.astro";
 
 <MainLayout title="Forside">
   <section class="bg-bordeaux px-gutter py-2xl md:px-2xl">
-    <img src="logo-text.png" alt="The Red Van" class="md:hidden" />
+    <img src="/logo-text.png" alt="The Red Van" class="md:hidden" />
     <img
-      src="forside-hero.webp"
+      src="/forside-hero.webp"
       alt="Billede af kvinde i The Red Van"
       class="py-2xl place-self-center"
     />
@@ -49,10 +49,10 @@ import Stoetform from "../components/Stoetform.astro";
       >
       <!-- BILLEDE -->
       <div class="overflow-hidden">
-        <img x-show="index === 0" src="mad.svg" class="w-full" />
-        <img x-show="index === 1" src="sokker.svg" class="w-full" />
-        <img x-show="index === 2" src="kondom2.svg" class="w-full" />
-        <img x-show="index === 3" src="soap.svg" class="w-full" />
+        <img x-show="index === 0" src="/mad.svg" class="w-full" />
+        <img x-show="index === 1" src="/sokker.svg" class="w-full" />
+        <img x-show="index === 2" src="/kondom2.svg" class="w-full" />
+        <img x-show="index === 3" src="/soap.svg" class="w-full" />
       </div>
 
       <!-- TEKST -->
@@ -97,11 +97,11 @@ import Stoetform from "../components/Stoetform.astro";
       <!-- PILE -->
       <div class="mt-4 flex justify-center gap-8">
         <button @click="index = (index + 3) % 4">
-          <img src="pil-tilbage.svg" alt="" />
+          <img src="/pil-tilbage.svg" alt="" />
         </button>
 
         <button @click="index = (index + 1) % 4">
-          <img src="pil-frem.svg" alt="" />
+          <img src="/pil-frem.svg" alt="" />
         </button>
       </div>
     </div>
@@ -113,7 +113,7 @@ import Stoetform from "../components/Stoetform.astro";
   >
     <div class="md:col-span-2 md:pr-gutter">
       <img
-        src="forside-body1.webp"
+        src="/forside-body1.webp"
         alt="Billede af frivllige ved The Red Van"
       />
     </div>
@@ -164,7 +164,7 @@ import Stoetform from "../components/Stoetform.astro";
 
     <div class="grid md:grid-cols-3 gap-gutter">
       <img
-        src="foredrag.webp"
+        src="/foredrag.webp"
         alt="Billede af foredragsholdere"
         class="pt-3xl pb-xl md:pt-4xl md:pb-0 md:col-start-2 md:col-end-4"
       />
@@ -196,7 +196,7 @@ import Stoetform from "../components/Stoetform.astro";
         <br /><br />
         Vi deler vores indsigter og perspektiver i vores blog: læs med her
       </Heading>
-      <img src="forside4.png" alt="Billede af rød kuglepen" />
+      <img src="/forside4.png" alt="Billede af rød kuglepen" />
     </div>
     <div class="border-y-accent-red border-y py-md md:py-0">
       <List
