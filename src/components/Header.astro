@@ -41,20 +41,21 @@ import Heading from "./Heading.astro";
           >
             <li>
               <a
-                href="vores-arbejde"
+                href="/vores-arbejde"
                 class="block px-5 py-2 hover:text-tertiary-darkpink"
                 >Vores arbejde</a
               >
             </li>
             <li>
               <a
-                href="hvem-vi-er"
+                href="/hvem-vi-er"
                 class="block px-5 py-2 hover:text-tertiary-darkpink"
-                >Hvem vi er</a>
+                >Hvem vi er</a
+              >
             </li>
             <li>
               <a
-                href="historien"
+                href="/historien"
                 class="block px-5 pt-2 pb-4 hover:text-tertiary-darkpink"
                 >Historien</a
               >
@@ -64,7 +65,7 @@ import Heading from "./Heading.astro";
 
         <!-- Bliv frivillig -->
         <li>
-          <a href="bliv-frivillig" class="hover:text-tertiary-darkpink">
+          <a href="/bliv-frivillig" class="hover:text-tertiary-darkpink">
             Bliv frivillig
           </a>
         </li>
@@ -80,13 +81,14 @@ import Heading from "./Heading.astro";
           >
             <li>
               <a
-                href="artikler"
-                class="block px-5 py-2 hover:text-tertiary-darkpink"
-                >Artikler</a>
+                href="/artikler"
+                class="block px-5 py-2 hover:text-tertiary-darkpink">Artikler</a
+              >
             </li>
             <li>
               <a href="#" class="block px-5 py-2 hover:text-tertiary-darkpink"
-                >Ressourcer</a>
+                >Ressourcer</a
+              >
             </li>
             <li>
               <a
@@ -107,7 +109,7 @@ import Heading from "./Heading.astro";
         </li>
 
         <!-- Støt -->
-        <li><Button href="stoet" variant="header">Støt</Button></li>
+        <li><Button href="/stoet" variant="header">Støt</Button></li>
       </ul>
 
       <!-- Burger-knap (kun mobil) -->
@@ -128,7 +130,7 @@ import Heading from "./Heading.astro";
       </button>
 
       <div class="fixed right-5 z-4 bottom-24 md:hidden">
-        <Button href="stoet" variant="header">Støt</Button>
+        <Button href="/stoet" variant="header">Støt</Button>
       </div>
 
       <!-- Mobil-menu -->
@@ -153,13 +155,13 @@ import Heading from "./Heading.astro";
             x-transition
             class="mt-2 flex flex-col gap-xs text-base"
           >
-            <a href="vores-arbejde" class="hover:text-tertiary-darkpink"
+            <a href="/vores-arbejde" class="hover:text-tertiary-darkpink"
               >Vores arbejde</a
             >
-            <a href="hvem-vi-er" class="hover:text-tertiary-darkpink"
+            <a href="/hvem-vi-er" class="hover:text-tertiary-darkpink"
               >Hvem vi er</a
             >
-            <a href="historien" class="hover:text-tertiary-darkpink pb-md"
+            <a href="/historien" class="hover:text-tertiary-darkpink pb-md"
               >Historien</a
             >
           </div>
@@ -169,7 +171,7 @@ import Heading from "./Heading.astro";
         <Heading htmlheading="h2" size="large2" stylingclasses=""
           ><a
             class="text-hf duration-500 ease-in-out hover:text-tertiary-darkpink"
-            href="bliv-frivillig">Bliv frivillig</a
+            href="/bliv-frivillig">Bliv frivillig</a
           >
         </Heading>
 
@@ -186,7 +188,8 @@ import Heading from "./Heading.astro";
             x-transition
             class="mt-2 flex flex-col gap-xs text-base"
           >
-            <a href="artikler" class="hover:text-tertiary-darkpink">Artikler</a>
+            <a href="/artikler" class="hover:text-tertiary-darkpink">Artikler</a
+            >
             <a href="#" class="hover:text-tertiary-darkpink">Ressourcer</a>
             <a href="#" class="hover:text-tertiary-darkpink pb-md"
               >Oplæg og workshops</a

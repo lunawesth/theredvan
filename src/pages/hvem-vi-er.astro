@@ -28,7 +28,7 @@ import Text from "../components/Text.astro";
       size="large"
       stylingclasses="uppercase pt-4xl md:pb-lg">Sekretariatet</Heading
     >
-    <div class="grid md:grid-cols-4 gap-gutter md:pb-4xl">
+    <div class="grid md:grid-cols-4 md:gap-gutter md:pb-4xl">
       <Card
         image="/om-os-jelena.webp"
         descr="Billede af Jelena"
@@ -57,7 +57,7 @@ import Text from "../components/Text.astro";
       />
     </div>
   </section>
-  <section class="bg-pink px-gutter py-3xl md:px-2xl md:py-4xl">
+  <section class="bg-pink px-gutter pt-2xl pb-3xl md:px-2xl md:py-4xl">
     <TextParagraf title="Vores bestyrelse" textCols={1}>
       <Text>
         Vi tror på, at den bedste retning for organisationen findes i samspillet
@@ -73,7 +73,7 @@ import Text from "../components/Text.astro";
         <img
           src="/bestyrelse.png"
           alt="Billede af bestyrelse"
-          class="bg-bordeaux py-sm px-sm pb-0"
+          class="bg-bordeaux py-sm px-sm pb-0 w-full"
         />
         <Text teksttype="basemedium">
           Fra venstre: Mathilde Høyberg, Nadir Kadhim Hamza, Jelena Seidel,
@@ -86,7 +86,7 @@ import Text from "../components/Text.astro";
       <Heading
         htmlheading="h2"
         size="medium"
-        stylingclasses="uppercase pt-3xl pb-xl">Ledelsen</Heading
+        stylingclasses="uppercase pt-lg pb-lg">Ledelsen</Heading
       >
       <div class="grid md:grid-cols-4 md:gap-gutter">
         <Card
@@ -105,11 +105,11 @@ import Text from "../components/Text.astro";
           text="Økonomi- og administrationschef i Fødevarebanken, med solid erfaring i økonomistyring og bestyrelsesarbejde i NGO’er."
         />
       </div>
-      <div class="border-t-accent-red border-t">
+      <div class="border-t-accent-red border-t mt-lg">
         <Heading
           htmlheading="h2"
           size="medium"
-          stylingclasses="uppercase pt-3xl pb-xl">Bestyrelsesmedlemmer</Heading
+          stylingclasses="uppercase pt-lg pb-lg">Bestyrelsesmedlemmer</Heading
         >
         <div class="grid md:grid-cols-4 md:gap-gutter">
           <Card
@@ -149,21 +149,22 @@ import Text from "../components/Text.astro";
         vælges demokratisk af de stemmeberettigede frivillige på
         generalforsamlingen og består af både aktive frivillige og personer med
         faglige kompetencer inden for organisationens virke. <br /><br
-        />Sammensætning og valgBestyrelsen består af 5-9 medlemmer og
-        konstituerer sig selv med en forperson, næstforperson og kasserer.
-        Minimum to af medlemmerne skal være frivillige i The Red Van. Derudover
-        vælges en frivillig tillidsrepræsentant, som deltager i bestyrelsens
-        arbejde med fokus på at varetage de frivilliges perspektiver – dog uden
-        stemmeret. <br /><br />
+        />Bestyrelsen består af 5-9 medlemmer og konstituerer sig selv med en
+        forperson, næstforperson og kasserer. Minimum to af medlemmerne skal
+        være frivillige i The Red Van. Derudover vælges en frivillig
+        tillidsrepræsentant, som deltager i bestyrelsens arbejde med fokus på at
+        varetage de frivilliges perspektiver – dog uden stemmeret. <br /><br />
       </Text>
       <Text>
         Bestyrelsesmedlemmer vælges for en toårig periode med forskudte valg, så
         der sikres kontinuitet. Inden valget fastsætter generalforsamlingen,
         hvor mange medlemmer der skal vælges. Kandidater kan stille op via to
         lister: <br />
+        <br />
         <span class="text-accent-red">LISTE A</span>
         <br />
         kandidater med særlige faglige kompetencer, indstillet af den siddende bestyrelse.
+        <br />
         <br />
         <span class="text-accent-red">LISTE B</span>
         <br />
