@@ -4,6 +4,7 @@ import HeadingParagraf from "../components/HeadingParagraf.astro";
 import TextParagraf from "../components/TextParagraf.astro";
 import Text from "../components/Text.astro";
 import Heading from "../components/Heading.astro";
+import Button from "../components/Button.astro";
 ---
 
 <MainLayout title="Bliv frivillig">
@@ -15,7 +16,7 @@ import Heading from "../components/Heading.astro";
 
     <div class="grid md:grid-cols-3">
       <img
-        src="frivillige.webp"
+        src="/frivillige.webp"
         alt="Billede af the red vans frivillige"
         class="pb-3xl md:col-start-2 md:col-end-4"
       />
@@ -69,65 +70,181 @@ import Heading from "../components/Heading.astro";
     <Heading htmlheading="h2" size="medium" stylingclasses="uppercase"
       >Send en ansøgning!</Heading
     >
-    <form>
-      <div>
-        <label for="fulde navn">Fulde navn</label>
-        <br />
-        <input type="text" id="Fulde navn" placeholder="Dit navn" />
-      </div>
 
-      <div>
-        <label for="pronominer">Pronominer</label><br />
-        <input type="checkbox" />
-        <label for="Hun/hende">Hun/hende</label>
-        <br />
-        <input type="checkbox" />
-        <label for="Han/ham">Han/ham</label>
-        <br />
-        <input type="checkbox" />
-        <label for="De/dem">De/dem</label>
-        <br />
-      </div>
+    <div class="mx-auto">
+      <form x-data="{ step: 1 }">
+        <div x-show="step === 1">
+          <!-- Fulde navn -->
+          <div class="flex flex-col w-88.25 lg:w-96.75 pb-xl">
+            <label for="selvvalgt"
+              ><Text
+                teksttype="basemedium"
+                stylingclasses="text-dark text-base pb-xs">Fulde navn</Text
+              ></label
+            >
+            <input
+              type="text"
+              id="navn"
+              name="navn"
+              class="rounded-xs border-0"
+            />
+          </div>
 
-      <div>
-        <label for="navn">Navn</label>
-        <input type="”text”" id="navn" placeholder="Holly" /><br />
-      </div>
+          <div class="flex flex-row gap-2xl">
+            <!-- e-mail -->
+            <div class="flex flex-col w-37.5 lg:w-46 pb-xl">
+              <label for="email"
+                ><Text
+                  teksttype="basemedium"
+                  stylingclasses="text-dark text-base pb-xs">E-mail</Text
+                ></label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="rounded-xs border-0"
+              />
+            </div>
 
-      <div>
-        <label for="adresse">Adresse</label>
-        <input type="”text”" id="adresse" placeholder="Pollyvej" /><br />
-      </div>
+            <!-- mobilnummer -->
+            <div class="flex flex-col w-40.75 lg:w-46">
+              <label for="mobilnummer"
+                ><Text
+                  teksttype="basemedium"
+                  stylingclasses="text-dark text-base pb-xs">Mobilnummer</Text
+                ></label
+              >
+              <input
+                type="tel"
+                id="tel"
+                name="tel"
+                class="rounded-xs border-0"
+              />
+            </div>
+          </div>
 
-      <div>
-        <label for="email">E-mail</label>
-        <input
-          type="”email”"
-          id="email"
-          placeholder="hollypaapollyvej@live.dk"
-        /><br />
-      </div>
+          <!-- checkbox -->
+          <div class="flex flex-row gap-3xl">
+            <div class="flex flex-col gap-md">
+              <!-- pronominer -->
+              <Text teksttype="basemedium" stylingclasses="">Pronominer</Text>
 
-      <div>
-        <label for="postnummer">Postnummer</label>
-        <input type="”text”" id="postnummer" placeholder="0420" /><br />
-      </div>
+              <!-- Hun-hende -->
+              <label class="flex items-center gap-5 cursor-pointer">
+                <input
+                  type="radio"
+                  name="køn"
+                  value="hun-hende"
+                  class="w-7 h-7 rounded-full bg-greywhite
+              checked:shadow-[inset_0_0_0_30px_#321F26]
+              transition focus:outline-none focus:ring-0 border-0"
+                />
+                <span
+                  ><Text teksttype="base" stylingclasses="text-dark"
+                    >Hun/hende</Text
+                  ></span
+                >
+              </label>
 
-      <div>
-        <label for="bynavn">Bynavn</label>
-        <input type="”text”" id="bynavn" placeholder="Pollyby" /><br />
-      </div>
+              <!-- Han-ham -->
+              <label class="flex items-center gap-5 cursor-pointer">
+                <input
+                  type="radio"
+                  name="køn"
+                  value="han-ham"
+                  class="w-7 h-7 rounded-full bg-greywhite
+                checked:shadow-[inset_0_0_0_30px_#321F26]
+                transition focus:outline-none focus:ring-0 border-0"
+                />
+                <span
+                  ><Text teksttype="base" stylingclasses="text-dark"
+                    >Han/ham</Text
+                  ></span
+                >
+              </label>
 
-      <div>
-        <label for="mobil">Mobil</label>
-        <input type="”tel”" id="mobil" placeholder="23322332" /><br />
-      </div>
+              <!-- de-dem -->
+              <label class="flex items-center gap-5 cursor-pointer">
+                <input
+                  type="radio"
+                  name="køn"
+                  value="de-dem"
+                  class="w-7 h-7 rounded-full bg-greywhite
+                  checked:shadow-[inset_0_0_0_30px_#321F26]
+                  transition focus:outline-none focus:ring-0 border-0"
+                />
+                <span
+                  ><Text teksttype="base" stylingclasses="text-dark"
+                    >De/dem</Text
+                  ></span
+                >
+              </label>
+            </div>
 
-      <div>
-        <label for="ja">Ja tak til nyhedsbreve</label>
-        <input type="checkbox" /><br />
-      </div>
-      <button type="”submit”">Indsend</button>
-    </form>
+            <!-- sprog -->
+            <div class="flex flex-col gap-md">
+              <Text teksttype="basemedium" stylingclasses="">Sprog</Text>
+
+              <!-- dansk -->
+              <label class="flex items-center gap-5 cursor-pointer">
+                <input
+                  type="radio"
+                  name="sprog"
+                  value="dansk"
+                  class="w-7 h-7 rounded-full bg-greywhite
+              checked:shadow-[inset_0_0_0_30px_#321F26]
+              transition focus:outline-none focus:ring-0 border-0"
+                />
+                <span
+                  ><Text teksttype="base" stylingclasses="text-dark">Dansk</Text
+                  ></span
+                >
+              </label>
+
+              <!-- engelsk -->
+              <label class="flex items-center gap-5 cursor-pointer">
+                <input
+                  type="radio"
+                  name="sprog"
+                  value="engelsk"
+                  class="w-7 h-7 rounded-full bg-greywhite
+                checked:shadow-[inset_0_0_0_30px_#321F26]
+                transition focus:outline-none focus:ring-0 border-0"
+                />
+                <span
+                  ><Text teksttype="base" stylingclasses="text-dark"
+                    >Engelsk</Text
+                  ></span
+                >
+              </label>
+
+              <!-- andet -->
+              <label class="flex items-center gap-5 cursor-pointer">
+                <input
+                  type="radio"
+                  name="sprog"
+                  value="andet"
+                  class="w-7 h-7 rounded-full bg-greywhite
+                  checked:shadow-[inset_0_0_0_30px_#321F26]
+                  transition focus:outline-none focus:ring-0 border-0"
+                />
+                <span
+                  ><Text teksttype="base" stylingclasses="text-dark">Andet</Text
+                  ></span
+                >
+              </label>
+            </div>
+          </div>
+
+          <!-- NÆSTE TRIN KNAP -->
+          <div class="flex justify-end">
+            <Button @click="step = step + 1" variant="light" type="button"
+              >Videre</Button
+            >
+          </div>
+        </div>
+      </form>
+    </div>
   </section>
 </MainLayout>
