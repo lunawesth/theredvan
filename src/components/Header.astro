@@ -1,6 +1,8 @@
 ---
 import Button from "./Button.astro";
 import Heading from "./Heading.astro";
+
+const { pathname } = Astro.url;
 ---
 
 <header
@@ -32,7 +34,16 @@ import Heading from "./Heading.astro";
       <ul class="hidden md:flex md:items-center gap-12 text-hf">
         <!-- Om os -->
         <li class="relative group">
-          <a href="#" class="hover:text-tertiary-darkpink">Om os</a>
+          <a
+            href="#"
+            class={`hover:text-tertiary-darkpink ${
+              pathname.startsWith("/hvem-vi-er") ||
+              pathname.startsWith("/vores-arbejde") ||
+              pathname.startsWith("/historien")
+                ? "text-tertiary-darkpink"
+                : ""
+            }`}>Om os</a
+          >
 
           <ul
             class="absolute -left-5 top-full mt-3 min-w-60 bg-bordeaux
@@ -65,14 +76,23 @@ import Heading from "./Heading.astro";
 
         <!-- Bliv frivillig -->
         <li>
-          <a href="/bliv-frivillig" class="hover:text-tertiary-darkpink">
+          <a
+            href="/bliv-frivillig"
+            class={`hover:text-tertiary-darkpink ${
+              pathname === "/bliv-frivillig" ? "text-tertiary-darkpink" : ""
+            }`}
+          >
             Bliv frivillig
           </a>
         </li>
 
         <!-- Viden -->
         <li class="relative group">
-          <a href="#" class="hover:text-tertiary-darkpink">Viden</a>
+          <a
+            class={`hover:text-tertiary-darkpink ${
+              pathname.startsWith("/artikler") ? "text-tertiary-darkpink" : ""
+            }`}>Viden</a
+          >
 
           <ul
             class="absolute -left-5 top-full mt-3 min-w-60 bg-bordeaux

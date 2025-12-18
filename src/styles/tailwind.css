@@ -53,6 +53,9 @@
   --spacing-4xl: 96px;
   --spacing-5xl: 128px;
   --spacing-6xl: 160px;
+
+  /*custom cursor*/
+  --cursor: url(/cursor.svg) 5 5, pointer;
 }
 
 @layer base {
@@ -118,6 +121,10 @@
 
   .text-hf {
     color: var(--color-secondary-pink);
+  }
+
+  * {
+    @apply cursor-(--cursor);
   }
 }
 
