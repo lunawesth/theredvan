@@ -4,9 +4,11 @@ import HeadingParagraf from "../components/HeadingParagraf.astro";
 import TextParagraf from "../components/TextParagraf.astro";
 import Text from "../components/Text.astro";
 import Heading from "../components/Heading.astro";
+import Spacing from "../components/Spacing.astro";
 ---
 
 <MainLayout title="Historien">
+  <Spacing />
   <section class="bg-blue px-gutter py-3xl md:px-2xl md:pt-4xl md:pb-5xl">
     <HeadingParagraf
       title="Historien"
@@ -34,17 +36,28 @@ import Heading from "../components/Heading.astro";
 
     <div class="grid md:grid-cols-3">
       <div class="md:col-start-2 md:col-end-4">
-        <Heading htmlheading="h4" size="xsmall" stylingclasses="pt-3xl"
-          >“I begyndelsen var vi usikre på, om nogen ville bruge vognen. Men
-          fordi vi selv var sexarbejdere og til stede på gaden, opbyggede vi
-          hurtigt tillid. Tilbuddet er stadig uformelt og anonymt – vi kræver
-          ikke noget til gengæld. Det gør, at vognen er blevet et populært
-          tilbud på gaden.”</Heading
-        ><br />
-        <Text>
-          — Jelena Seidel, politisk konsulent i The Red Van & medstifter af
-          Sexelancen</Text
+        <div
+          x-data="{ show: false }"
+          x-intersect.once="show = true"
+          class="overflow-hidden"
         >
+          <div
+            class="transform transition-transform duration-800 easy-ease"
+            :class="show ? 'translate-y-0' : 'translate-y-10'"
+          >
+            <Heading htmlheading="h4" size="xsmall" stylingclasses="pt-3xl"
+              >“I begyndelsen var vi usikre på, om nogen ville bruge vognen. Men
+              fordi vi selv var sexarbejdere og til stede på gaden, opbyggede vi
+              hurtigt tillid. Tilbuddet er stadig uformelt og anonymt – vi
+              kræver ikke noget til gengæld. Det gør, at vognen er blevet et
+              populært tilbud på gaden.”</Heading
+            ><br />
+            <Text>
+              — Jelena Seidel, politisk konsulent i The Red Van & medstifter af
+              Sexelancen</Text
+            >
+          </div>
+        </div>
       </div>
     </div>
 
@@ -77,5 +90,5 @@ import Heading from "../components/Heading.astro";
         indvirkning.
       </Text>
     </TextParagraf>
-  </section>
-</MainLayout>
+  </section></MainLayout
+>
