@@ -16,7 +16,7 @@ import Text from "../components/Text.astro";
     />
     <div class="grid md:grid-cols-3">
       <img
-        src="frivillige.webp"
+        src="/frivillige.webp"
         alt="Billede af frivllige foran the red van"
         class="pb-xl md:col-span-2"
       />
@@ -30,28 +30,28 @@ import Text from "../components/Text.astro";
     >
     <div class="grid md:grid-cols-4 gap-gutter md:pb-4xl">
       <Card
-        image="om-os-jelena.webp"
+        image="/om-os-jelena.webp"
         descr="Billede af Jelena"
         title="Jelena Seidel"
         undertitle="Politisk konsulent"
         text="Taler om sexarbejderrettigheder med politikere og samarbejdspartnere."
       />
       <Card
-        image="om-os-linnea.webp"
+        image="/om-os-linnea.webp"
         descr="Billede af Linnea"
         title="Linnea Hardgrib"
         undertitle="Frivilligkoordinator"
         text="Koordinerer den frivillige indsats og sikrer stærkt engagement i TRV."
       />
       <Card
-        image="om-os-violeta.webp"
+        image="/om-os-violeta.webp"
         descr="Billede af Violeta"
         title="Violeta Ligayen Yanez"
         undertitle="Sekretariatsleder"
         text="Leder sekretariatets arbejde og startegiske og organnisatoriske udvikling."
       />
       <img
-        src="dragonfly.png"
+        src="/dragonfly.png"
         alt="Grafisk dragonfly"
         class="place-self-end md:my-auto"
       />
@@ -70,7 +70,11 @@ import Text from "../components/Text.astro";
     </TextParagraf>
     <div class="grid md:grid-cols-3">
       <div class="md:col-start-2 md:col-end-4 py-3xl">
-        <img src="placeholder.webp" alt="" />
+        <img
+          src="/bestyrelse.png"
+          alt="Billede af bestyrelse"
+          class="bg-bordeaux py-sm px-sm pb-0"
+        />
         <Text teksttype="basemedium">
           Fra venstre: Mathilde Høyberg, Nadir Kadhim Hamza, Jelena Seidel,
           Jannet Van der Veen, Henrik Olsen, Rie Ljungmann, Yasmin Bahat, Maria
@@ -137,7 +141,7 @@ import Text from "../components/Text.astro";
       </div>
     </div>
   </section>
-  <section class="bg-green px-gutter py-3xl md:px-2xl md:py-4xl">
+  <section class="bg-green px-gutter py-3xl md:px-2xl md:pt-4xl md:pb-6xl">
     <TextParagraf title="Vores retningslinjer for bestyrelsen" textCols={2}>
       <Text>
         The Red Van ledes af en frivillig og ulønnet bestyrelse, som har det
@@ -168,6 +172,6 @@ import Text from "../components/Text.astro";
         for ekstraopgaver, hvis bestyrelsen beslutter det.
       </Text>
     </TextParagraf>
-    <img src="stol.png" alt="Billede af rød stol" class="md:-mt-70" />
+    <img src="/stol.png" alt="Billede af rød stol" class="md:-mt-50" />
   </section>
 </MainLayout>

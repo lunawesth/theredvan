@@ -34,7 +34,7 @@ import Stoetform from "../components/Stoetform.astro";
       <div class="mx-auto">
         <Stoetform />
       </div>
-      <img src="bil.webp" alt="Rød bil" class="py-3xl md:pb-2xl md:pt-0" />
+      <img src="/bil.webp" alt="Rød bil" class="py-3xl md:pb-2xl md:pt-0" />
     </section>
     <Heading
       htmlheading="h2"
@@ -42,7 +42,7 @@ import Stoetform from "../components/Stoetform.astro";
       stylingclasses="uppercase pb-xl md:pb-2xl"
       >Tre gode grunde til at donere</Heading
     >
-    <div class="grid md:grid-cols-3 pb-3xl md:pb-4xl md:gap-gutter">
+    <div class="grid md:grid-cols-3 md:gap-gutter">
       <Card
         header="01"
         title="Du gør en konkret forskel"
@@ -81,7 +81,7 @@ import Stoetform from "../components/Stoetform.astro";
     </div>
 
     <div class="md:col-start-5 md:col-end-7">
-      <img src="plakat.webp" alt="Billede af plakat" class="pt-3xl md:pt-0" />
+      <img src="/plakat.webp" alt="Billede af plakat" class="pt-3xl md:pt-0" />
     </div>
   </section>
   <section class="bg-pink px-gutter py-3xl md:px-2xl md:py-4xl">
@@ -90,18 +90,10 @@ import Stoetform from "../components/Stoetform.astro";
       t-shirts til muleposer!
     </TextParagraf>
 
-    <section class="py-xl md:pt-5xl grid md:grid-cols-3 gap-gutter">
-      <img src="tote.png" alt="Billede af mulepose med grafisk illustration" />
-      <img
-        src="tote.png"
-        alt="Billede af mulepose med grafisk illustration"
-        class="hidden md:block"
-      />
-      <img
-        src="tote.png"
-        alt="Billede af mulepose med grafisk illustration"
-        class="hidden md:block"
-      />
+    <section class="py-xl md:pt-4xl grid md:grid-cols-3 gap-gutter">
+      <img src="/merch3.webp" alt="Billede af merch." />
+      <img src="/merch2.webp" alt="Billede af merch." class="hidden md:block" />
+      <img src="/merch1.webp" alt="Billede af merch." class="hidden md:block" />
     </section>
     <Button variant="light">Se vores merch</Button>
   </section>
